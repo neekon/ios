@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82BC51011A60F3E1002503F1 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BC50FC1A60F3E1002503F1 /* Bolts.framework */; };
+		82BC51021A60F3E1002503F1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BC50FD1A60F3E1002503F1 /* Parse.framework */; };
+		82BC51031A60F3E1002503F1 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BC50FE1A60F3E1002503F1 /* ParseCrashReporting.framework */; };
+		82BC51041A60F3E1002503F1 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BC50FF1A60F3E1002503F1 /* ParseFacebookUtils.framework */; };
+		82BC51051A60F3E1002503F1 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BC51001A60F3E1002503F1 /* ParseUI.framework */; };
 		E511F9641A60ED9100C93E86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F9631A60ED9100C93E86 /* AppDelegate.swift */; };
 		E511F9661A60ED9100C93E86 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F9651A60ED9100C93E86 /* FirstViewController.swift */; };
 		E511F9681A60ED9100C93E86 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F9671A60ED9100C93E86 /* SecondViewController.swift */; };
@@ -27,6 +32,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		82BC50FC1A60F3E1002503F1 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Frameworks/Bolts.framework; sourceTree = "<group>"; };
+		82BC50FD1A60F3E1002503F1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Frameworks/Parse.framework; sourceTree = "<group>"; };
+		82BC50FE1A60F3E1002503F1 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = Frameworks/ParseCrashReporting.framework; sourceTree = "<group>"; };
+		82BC50FF1A60F3E1002503F1 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = Frameworks/ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		82BC51001A60F3E1002503F1 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = Frameworks/ParseUI.framework; sourceTree = "<group>"; };
 		E511F95E1A60ED9100C93E86 /* Neekon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neekon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E511F9621A60ED9100C93E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E511F9631A60ED9100C93E86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +55,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82BC51021A60F3E1002503F1 /* Parse.framework in Frameworks */,
+				82BC51031A60F3E1002503F1 /* ParseCrashReporting.framework in Frameworks */,
+				82BC51051A60F3E1002503F1 /* ParseUI.framework in Frameworks */,
+				82BC51041A60F3E1002503F1 /* ParseFacebookUtils.framework in Frameworks */,
+				82BC51011A60F3E1002503F1 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +76,11 @@
 		E511F9551A60ED9100C93E86 = {
 			isa = PBXGroup;
 			children = (
+				82BC50FC1A60F3E1002503F1 /* Bolts.framework */,
+				82BC50FD1A60F3E1002503F1 /* Parse.framework */,
+				82BC50FE1A60F3E1002503F1 /* ParseCrashReporting.framework */,
+				82BC50FF1A60F3E1002503F1 /* ParseFacebookUtils.framework */,
+				82BC51001A60F3E1002503F1 /* ParseUI.framework */,
 				E511F9601A60ED9100C93E86 /* Neekon */,
 				E511F9781A60ED9200C93E86 /* NeekonTests */,
 				E511F95F1A60ED9100C93E86 /* Products */,
@@ -340,6 +360,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = Neekon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -350,6 +374,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = Neekon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -409,6 +437,7 @@
 				E511F9811A60ED9200C93E86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E511F9821A60ED9200C93E86 /* Build configuration list for PBXNativeTarget "NeekonTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +446,7 @@
 				E511F9841A60ED9200C93E86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
