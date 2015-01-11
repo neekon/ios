@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  SecondViewController.swift
 //  Neekon
 //
 //  Created by Eiman Zolfaghari on 1/9/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class ScheduleViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

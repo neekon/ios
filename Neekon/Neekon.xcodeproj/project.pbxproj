@@ -26,12 +26,15 @@
 		82BC51041A60F3E1002503F1 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BC50FF1A60F3E1002503F1 /* ParseFacebookUtils.framework */; };
 		82BC51051A60F3E1002503F1 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BC51001A60F3E1002503F1 /* ParseUI.framework */; };
 		E511F9641A60ED9100C93E86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F9631A60ED9100C93E86 /* AppDelegate.swift */; };
-		E511F9661A60ED9100C93E86 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F9651A60ED9100C93E86 /* FirstViewController.swift */; };
-		E511F9681A60ED9100C93E86 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F9671A60ED9100C93E86 /* SecondViewController.swift */; };
+		E511F9661A60ED9100C93E86 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F9651A60ED9100C93E86 /* HomeViewController.swift */; };
+		E511F9681A60ED9100C93E86 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F9671A60ED9100C93E86 /* ScheduleViewController.swift */; };
 		E511F96B1A60ED9100C93E86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E511F9691A60ED9100C93E86 /* Main.storyboard */; };
 		E511F96D1A60ED9100C93E86 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E511F96C1A60ED9100C93E86 /* Images.xcassets */; };
 		E511F9701A60ED9100C93E86 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E511F96E1A60ED9100C93E86 /* LaunchScreen.xib */; };
 		E511F97C1A60ED9200C93E86 /* NeekonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F97B1A60ED9200C93E86 /* NeekonTests.swift */; };
+		E511F9871A62FE3C00C93E86 /* NewsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F9861A62FE3C00C93E86 /* NewsObject.swift */; };
+		E511F9891A63008E00C93E86 /* ScheduleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F9881A63008E00C93E86 /* ScheduleObject.swift */; };
+		E511F98B1A63011F00C93E86 /* MapObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F98A1A63011F00C93E86 /* MapObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,14 +69,17 @@
 		E511F95E1A60ED9100C93E86 /* Neekon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neekon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E511F9621A60ED9100C93E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E511F9631A60ED9100C93E86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E511F9651A60ED9100C93E86 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		E511F9671A60ED9100C93E86 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		E511F9651A60ED9100C93E86 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E511F9671A60ED9100C93E86 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		E511F96A1A60ED9100C93E86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E511F96C1A60ED9100C93E86 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E511F96F1A60ED9100C93E86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E511F9751A60ED9200C93E86 /* NeekonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeekonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E511F97A1A60ED9200C93E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E511F97B1A60ED9200C93E86 /* NeekonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeekonTests.swift; sourceTree = "<group>"; };
+		E511F9861A62FE3C00C93E86 /* NewsObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsObject.swift; sourceTree = "<group>"; };
+		E511F9881A63008E00C93E86 /* ScheduleObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleObject.swift; sourceTree = "<group>"; };
+		E511F98A1A63011F00C93E86 /* MapObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,9 +157,10 @@
 		E511F9601A60ED9100C93E86 /* Neekon */ = {
 			isa = PBXGroup;
 			children = (
+				E511F9851A62FDE100C93E86 /* Data Objects */,
 				E511F9631A60ED9100C93E86 /* AppDelegate.swift */,
-				E511F9651A60ED9100C93E86 /* FirstViewController.swift */,
-				E511F9671A60ED9100C93E86 /* SecondViewController.swift */,
+				E511F9651A60ED9100C93E86 /* HomeViewController.swift */,
+				E511F9671A60ED9100C93E86 /* ScheduleViewController.swift */,
 				E511F9691A60ED9100C93E86 /* Main.storyboard */,
 				E511F96C1A60ED9100C93E86 /* Images.xcassets */,
 				E511F96E1A60ED9100C93E86 /* LaunchScreen.xib */,
@@ -185,6 +192,16 @@
 				E511F97A1A60ED9200C93E86 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E511F9851A62FDE100C93E86 /* Data Objects */ = {
+			isa = PBXGroup;
+			children = (
+				E511F9861A62FE3C00C93E86 /* NewsObject.swift */,
+				E511F9881A63008E00C93E86 /* ScheduleObject.swift */,
+				E511F98A1A63011F00C93E86 /* MapObject.swift */,
+			);
+			name = "Data Objects";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,9 +304,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E511F9681A60ED9100C93E86 /* SecondViewController.swift in Sources */,
+				E511F9681A60ED9100C93E86 /* ScheduleViewController.swift in Sources */,
 				E511F9641A60ED9100C93E86 /* AppDelegate.swift in Sources */,
-				E511F9661A60ED9100C93E86 /* FirstViewController.swift in Sources */,
+				E511F9661A60ED9100C93E86 /* HomeViewController.swift in Sources */,
+				E511F98B1A63011F00C93E86 /* MapObject.swift in Sources */,
+				E511F9871A62FE3C00C93E86 /* NewsObject.swift in Sources */,
+				E511F9891A63008E00C93E86 /* ScheduleObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
