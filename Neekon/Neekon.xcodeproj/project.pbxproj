@@ -31,21 +31,10 @@
 		E511F96B1A60ED9100C93E86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E511F9691A60ED9100C93E86 /* Main.storyboard */; };
 		E511F96D1A60ED9100C93E86 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E511F96C1A60ED9100C93E86 /* Images.xcassets */; };
 		E511F9701A60ED9100C93E86 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E511F96E1A60ED9100C93E86 /* LaunchScreen.xib */; };
-		E511F97C1A60ED9200C93E86 /* NeekonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F97B1A60ED9200C93E86 /* NeekonTests.swift */; };
 		E511F9871A62FE3C00C93E86 /* NewsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F9861A62FE3C00C93E86 /* NewsObject.swift */; };
 		E511F9891A63008E00C93E86 /* ScheduleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F9881A63008E00C93E86 /* ScheduleObject.swift */; };
 		E511F98B1A63011F00C93E86 /* MapObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F98A1A63011F00C93E86 /* MapObject.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		E511F9761A60ED9200C93E86 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E511F9561A60ED9100C93E86 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E511F95D1A60ED9100C93E86;
-			remoteInfo = Neekon;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8219A1771A622ADD00933D54 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -61,11 +50,11 @@
 		8219A18B1A622B1F00933D54 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8219A18D1A622B2A00933D54 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		8219A18F1A622B3400933D54 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		82BC50FC1A60F3E1002503F1 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Frameworks/Bolts.framework; sourceTree = "<group>"; };
-		82BC50FD1A60F3E1002503F1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Frameworks/Parse.framework; sourceTree = "<group>"; };
-		82BC50FE1A60F3E1002503F1 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = Frameworks/ParseCrashReporting.framework; sourceTree = "<group>"; };
-		82BC50FF1A60F3E1002503F1 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = Frameworks/ParseFacebookUtils.framework; sourceTree = "<group>"; };
-		82BC51001A60F3E1002503F1 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = Frameworks/ParseUI.framework; sourceTree = "<group>"; };
+		82BC50FC1A60F3E1002503F1 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../Frameworks/Bolts.framework; sourceTree = "<group>"; };
+		82BC50FD1A60F3E1002503F1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../Frameworks/Parse.framework; sourceTree = "<group>"; };
+		82BC50FE1A60F3E1002503F1 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = ../Frameworks/ParseCrashReporting.framework; sourceTree = "<group>"; };
+		82BC50FF1A60F3E1002503F1 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = ../Frameworks/ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		82BC51001A60F3E1002503F1 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = ../Frameworks/ParseUI.framework; sourceTree = "<group>"; };
 		E511F95E1A60ED9100C93E86 /* Neekon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neekon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E511F9621A60ED9100C93E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E511F9631A60ED9100C93E86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,9 +63,6 @@
 		E511F96A1A60ED9100C93E86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E511F96C1A60ED9100C93E86 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E511F96F1A60ED9100C93E86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		E511F9751A60ED9200C93E86 /* NeekonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeekonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E511F97A1A60ED9200C93E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E511F97B1A60ED9200C93E86 /* NeekonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeekonTests.swift; sourceTree = "<group>"; };
 		E511F9861A62FE3C00C93E86 /* NewsObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsObject.swift; sourceTree = "<group>"; };
 		E511F9881A63008E00C93E86 /* ScheduleObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleObject.swift; sourceTree = "<group>"; };
 		E511F98A1A63011F00C93E86 /* MapObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapObject.swift; sourceTree = "<group>"; };
@@ -108,17 +94,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E511F9721A60ED9200C93E86 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E511F9551A60ED9100C93E86 = {
+		E5050FF11A709F9600ACFF66 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				8219A18F1A622B3400933D54 /* libsqlite3.dylib */,
@@ -139,8 +118,23 @@
 				82BC50FE1A60F3E1002503F1 /* ParseCrashReporting.framework */,
 				82BC50FF1A60F3E1002503F1 /* ParseFacebookUtils.framework */,
 				82BC51001A60F3E1002503F1 /* ParseUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5050FF21A709FB700ACFF66 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E511F9651A60ED9100C93E86 /* HomeViewController.swift */,
+				E511F9671A60ED9100C93E86 /* ScheduleViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		E511F9551A60ED9100C93E86 = {
+			isa = PBXGroup;
+			children = (
 				E511F9601A60ED9100C93E86 /* Neekon */,
-				E511F9781A60ED9200C93E86 /* NeekonTests */,
 				E511F95F1A60ED9100C93E86 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -149,7 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				E511F95E1A60ED9100C93E86 /* Neekon.app */,
-				E511F9751A60ED9200C93E86 /* NeekonTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,13 +150,13 @@
 		E511F9601A60ED9100C93E86 /* Neekon */ = {
 			isa = PBXGroup;
 			children = (
+				E5050FF21A709FB700ACFF66 /* View Controllers */,
 				E511F9851A62FDE100C93E86 /* Data Objects */,
 				E511F9631A60ED9100C93E86 /* AppDelegate.swift */,
-				E511F9651A60ED9100C93E86 /* HomeViewController.swift */,
-				E511F9671A60ED9100C93E86 /* ScheduleViewController.swift */,
 				E511F9691A60ED9100C93E86 /* Main.storyboard */,
 				E511F96C1A60ED9100C93E86 /* Images.xcassets */,
 				E511F96E1A60ED9100C93E86 /* LaunchScreen.xib */,
+				E5050FF11A709F9600ACFF66 /* Frameworks */,
 				E511F9611A60ED9100C93E86 /* Supporting Files */,
 			);
 			path = Neekon;
@@ -173,23 +166,6 @@
 			isa = PBXGroup;
 			children = (
 				E511F9621A60ED9100C93E86 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E511F9781A60ED9200C93E86 /* NeekonTests */ = {
-			isa = PBXGroup;
-			children = (
-				E511F97B1A60ED9200C93E86 /* NeekonTests.swift */,
-				E511F9791A60ED9200C93E86 /* Supporting Files */,
-			);
-			path = NeekonTests;
-			sourceTree = "<group>";
-		};
-		E511F9791A60ED9200C93E86 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E511F97A1A60ED9200C93E86 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -224,24 +200,6 @@
 			productReference = E511F95E1A60ED9100C93E86 /* Neekon.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E511F9741A60ED9200C93E86 /* NeekonTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E511F9821A60ED9200C93E86 /* Build configuration list for PBXNativeTarget "NeekonTests" */;
-			buildPhases = (
-				E511F9711A60ED9200C93E86 /* Sources */,
-				E511F9721A60ED9200C93E86 /* Frameworks */,
-				E511F9731A60ED9200C93E86 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E511F9771A60ED9200C93E86 /* PBXTargetDependency */,
-			);
-			name = NeekonTests;
-			productName = NeekonTests;
-			productReference = E511F9751A60ED9200C93E86 /* NeekonTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -253,10 +211,6 @@
 				TargetAttributes = {
 					E511F95D1A60ED9100C93E86 = {
 						CreatedOnToolsVersion = 6.2;
-					};
-					E511F9741A60ED9200C93E86 = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = E511F95D1A60ED9100C93E86;
 					};
 				};
 			};
@@ -274,7 +228,6 @@
 			projectRoot = "";
 			targets = (
 				E511F95D1A60ED9100C93E86 /* Neekon */,
-				E511F9741A60ED9200C93E86 /* NeekonTests */,
 			);
 		};
 /* End PBXProject section */
@@ -287,13 +240,6 @@
 				E511F96B1A60ED9100C93E86 /* Main.storyboard in Resources */,
 				E511F9701A60ED9100C93E86 /* LaunchScreen.xib in Resources */,
 				E511F96D1A60ED9100C93E86 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E511F9731A60ED9200C93E86 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,23 +259,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E511F9711A60ED9200C93E86 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E511F97C1A60ED9200C93E86 /* NeekonTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		E511F9771A60ED9200C93E86 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E511F95D1A60ED9100C93E86 /* Neekon */;
-			targetProxy = E511F9761A60ED9200C93E86 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E511F9691A60ED9100C93E86 /* Main.storyboard */ = {
@@ -385,7 +315,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -421,7 +351,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -432,6 +362,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -446,6 +377,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -453,40 +385,6 @@
 				INFOPLIST_FILE = Neekon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		E511F9831A60ED9200C93E86 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = NeekonTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Neekon.app/Neekon";
-			};
-			name = Debug;
-		};
-		E511F9841A60ED9200C93E86 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = NeekonTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Neekon.app/Neekon";
 			};
 			name = Release;
 		};
@@ -507,15 +405,6 @@
 			buildConfigurations = (
 				E511F9801A60ED9200C93E86 /* Debug */,
 				E511F9811A60ED9200C93E86 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E511F9821A60ED9200C93E86 /* Build configuration list for PBXNativeTarget "NeekonTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E511F9831A60ED9200C93E86 /* Debug */,
-				E511F9841A60ED9200C93E86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
