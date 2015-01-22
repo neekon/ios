@@ -11,5 +11,4 @@ import UIKit
 class MapObject {
     var eventLocation : NSString = ""
     var mapImage : UIImage = UIImage()
-    
 }
