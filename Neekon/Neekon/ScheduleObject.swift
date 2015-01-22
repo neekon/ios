@@ -11,4 +11,5 @@ import UIKit
 class ScheduleObject {
     var eventDateAndTime : NSDate?
     var fbEventLink : NSString?
+    var location: NSString?
 }

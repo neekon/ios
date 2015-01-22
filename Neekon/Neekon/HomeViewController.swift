@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Parse
 
 class HomeViewController: UIViewController {
+    var news = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        fetchNews()
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,6 +26,15 @@ class HomeViewController: UIViewController {
         
     }
 
-
+    func fetchNews() {
+        let query = PFQuery(className: "News")
+        query.findObjectsInBackgroundWithBlock { (newsResult, error:NSError?) -> Void in
+            if (error != nil) {
+                self.news = newsResult
+            } else {
+                // TODO: Show
+            }
+        }
+    }
 }
 
