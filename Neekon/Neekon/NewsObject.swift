@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import Parse
 
-class NewsObject {
+class NewsObject : PFObject {
     var title : String = ""
     var content : String = ""
     var dateCreated : NSDate = NSDate()

@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Parse
 
-class ScheduleObject {
+class ScheduleObject : PFObject {
     var eventDateAndTime : NSDate?
     var fbEventLink : NSString?
     var location: NSString?
