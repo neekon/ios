@@ -74,6 +74,11 @@ class ScheduleViewController: UIViewController {
         let region = MKCoordinateRegionMakeWithDistance(coordinates, 3000, 3000)
         let adjustedRegion = mapView.regionThatFits(region)
         
+        // Add pin
+        let point = MKPointAnnotation()
+        point.coordinate = coordinates
+        mapView.addAnnotation(point)
+
         mapView.setRegion(region, animated: true)
         mapView.showsUserLocation = true
     }
