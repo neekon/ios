@@ -61,12 +61,21 @@ class ScheduleViewController: UIViewController {
     }
     
     func updateAddress() {
-        println("updating address")
-        addressLabel.text = schedule.objectForKey("location") as NSString
+        let address = schedule.objectForKey("location") as NSString
+        addressLabel.text = "Address: \(address)"
     }
     
     func updateMap() {
+        let address = schedule.objectForKey("location") as NSString
+        let latitude = schedule.objectForKey("latitude") as NSString
+        let longitude = schedule.objectForKey("longitude") as NSString
         
+        let coordinates = CLLocationCoordinate2D(latitude: CLLocationDegrees(latitude.doubleValue) , longitude: CLLocationDegrees(longitude.doubleValue))
+        let region = MKCoordinateRegionMakeWithDistance(coordinates, 3000, 3000)
+        let adjustedRegion = mapView.regionThatFits(region)
+        
+        mapView.setRegion(region, animated: true)
+        mapView.showsUserLocation = true
     }
 
 }
