@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Home-->
@@ -116,33 +118,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Map View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="dSS-sY-3yn">
-                                <rect key="frame" x="221" y="279" width="157.5" height="41.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIt-pO-XTq">
-                                <rect key="frame" x="192" y="329" width="215.5" height="17"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bYi-pF-2mt">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="464"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address: San Francisco, CA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSe-hM-1yv">
+                                <rect key="frame" x="16" y="472" width="568" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFm-T3-3HC">
+                                <rect key="frame" x="486" y="497" width="98" height="30"/>
+                                <gestureRecognizers/>
+                                <state key="normal" title="Get Directions">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="h1G-em-xQa" appends="YES" id="2Sv-gq-Soz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xIt-pO-XTq" firstAttribute="centerX" secondItem="dSS-sY-3yn" secondAttribute="centerX" id="AAo-yC-YAW"/>
-                            <constraint firstAttribute="centerX" secondItem="dSS-sY-3yn" secondAttribute="centerX" id="U6K-R5-nay"/>
-                            <constraint firstAttribute="centerY" secondItem="dSS-sY-3yn" secondAttribute="centerY" id="cvg-Dg-vp2"/>
-                            <constraint firstItem="xIt-pO-XTq" firstAttribute="top" secondItem="dSS-sY-3yn" secondAttribute="bottom" constant="8" symbolic="YES" id="mt6-oC-yuv"/>
+                            <constraint firstItem="kSe-hM-1yv" firstAttribute="top" secondItem="bYi-pF-2mt" secondAttribute="bottom" constant="8" id="7Hn-T5-XQO"/>
+                            <constraint firstItem="uFm-T3-3HC" firstAttribute="top" secondItem="kSe-hM-1yv" secondAttribute="bottom" constant="8" id="CjO-yo-zDH"/>
+                            <constraint firstItem="bYi-pF-2mt" firstAttribute="leading" secondItem="V4F-2C-wSa" secondAttribute="leadingMargin" constant="-16" id="dm6-bg-NBt"/>
+                            <constraint firstItem="3Ta-09-FSP" firstAttribute="top" secondItem="uFm-T3-3HC" secondAttribute="bottom" constant="24" id="eoQ-sY-3nU"/>
+                            <constraint firstItem="uFm-T3-3HC" firstAttribute="trailing" secondItem="V4F-2C-wSa" secondAttribute="trailingMargin" id="fem-y7-qsZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bYi-pF-2mt" secondAttribute="trailing" constant="-16" id="jK3-wV-Un9"/>
+                            <constraint firstItem="bYi-pF-2mt" firstAttribute="top" secondItem="g8p-vo-ZCK" secondAttribute="bottom" constant="-20" id="kg7-2l-5ZK"/>
+                            <constraint firstItem="kSe-hM-1yv" firstAttribute="leading" secondItem="V4F-2C-wSa" secondAttribute="leadingMargin" id="nYE-hI-ZtL"/>
+                            <constraint firstItem="kSe-hM-1yv" firstAttribute="trailing" secondItem="V4F-2C-wSa" secondAttribute="trailingMargin" id="uzU-gu-dB1"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="second" id="xFN-lp-91F" userLabel="Map"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="kSe-hM-1yv" id="a0S-6U-fuu"/>
+                        <outlet property="mapView" destination="bYi-pF-2mt" id="qWl-Ht-Ago"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6DJ-H1-QbW" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="h1G-em-xQa">
+                    <connections>
+                        <action selector="didTapGetDirection:" destination="PU1-sG-b44" id="gi8-xJ-oPC"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="735" y="1029"/>
+            <point key="canvasLocation" x="735" y="1065"/>
         </scene>
     </scenes>
     <resources>

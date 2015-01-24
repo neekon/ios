@@ -28,7 +28,7 @@ class HomeViewController: UIViewController {
 
     func fetchNews() {
         let query = PFQuery(className: "News")
-        query.findObjectsInBackgroundWithBlock { (newsResult, error:NSError?) -> Void in
+        query.findObjectsInBackgroundWithBlock { (newsResult:[AnyObject]!, error:NSError?) -> Void in
             if (error != nil) {
                 self.news = newsResult
             } else {

@@ -20,6 +20,7 @@
 		8219A18C1A622B1F00933D54 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8219A18B1A622B1F00933D54 /* SystemConfiguration.framework */; };
 		8219A18E1A622B2A00933D54 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8219A18D1A622B2A00933D54 /* libz.dylib */; };
 		8219A1901A622B3400933D54 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8219A18F1A622B3400933D54 /* libsqlite3.dylib */; };
+		827E9CC51A742BB600DC4D4E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 827E9CC41A742BB600DC4D4E /* MapKit.framework */; };
 		82BC51011A60F3E1002503F1 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BC50FC1A60F3E1002503F1 /* Bolts.framework */; };
 		82BC51021A60F3E1002503F1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BC50FD1A60F3E1002503F1 /* Parse.framework */; };
 		82BC51031A60F3E1002503F1 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BC50FE1A60F3E1002503F1 /* ParseCrashReporting.framework */; };
@@ -50,6 +51,7 @@
 		8219A18B1A622B1F00933D54 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8219A18D1A622B2A00933D54 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		8219A18F1A622B3400933D54 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		827E9CC41A742BB600DC4D4E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		82BC50FC1A60F3E1002503F1 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../Frameworks/Bolts.framework; sourceTree = "<group>"; };
 		82BC50FD1A60F3E1002503F1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../Frameworks/Parse.framework; sourceTree = "<group>"; };
 		82BC50FE1A60F3E1002503F1 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = ../Frameworks/ParseCrashReporting.framework; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				827E9CC51A742BB600DC4D4E /* MapKit.framework in Frameworks */,
 				8219A1901A622B3400933D54 /* libsqlite3.dylib in Frameworks */,
 				8219A18E1A622B2A00933D54 /* libz.dylib in Frameworks */,
 				8219A18C1A622B1F00933D54 /* SystemConfiguration.framework in Frameworks */,
@@ -100,6 +103,7 @@
 		E5050FF11A709F9600ACFF66 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				827E9CC41A742BB600DC4D4E /* MapKit.framework */,
 				8219A18F1A622B3400933D54 /* libsqlite3.dylib */,
 				8219A18D1A622B2A00933D54 /* libz.dylib */,
 				8219A18B1A622B1F00933D54 /* SystemConfiguration.framework */,
