@@ -21,14 +21,15 @@
 		8219A18E1A622B2A00933D54 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8219A18D1A622B2A00933D54 /* libz.dylib */; };
 		8219A1901A622B3400933D54 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8219A18F1A622B3400933D54 /* libsqlite3.dylib */; };
 		827E9CC51A742BB600DC4D4E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 827E9CC41A742BB600DC4D4E /* MapKit.framework */; };
+		82AE29D51A75A6A80004FDB3 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AE29D41A75A6A80004FDB3 /* ScheduleViewController.swift */; };
 		82BC51011A60F3E1002503F1 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BC50FC1A60F3E1002503F1 /* Bolts.framework */; };
 		82BC51021A60F3E1002503F1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BC50FD1A60F3E1002503F1 /* Parse.framework */; };
 		82BC51031A60F3E1002503F1 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BC50FE1A60F3E1002503F1 /* ParseCrashReporting.framework */; };
 		82BC51041A60F3E1002503F1 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BC50FF1A60F3E1002503F1 /* ParseFacebookUtils.framework */; };
 		82BC51051A60F3E1002503F1 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BC51001A60F3E1002503F1 /* ParseUI.framework */; };
 		E511F9641A60ED9100C93E86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F9631A60ED9100C93E86 /* AppDelegate.swift */; };
-		E511F9661A60ED9100C93E86 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F9651A60ED9100C93E86 /* HomeViewController.swift */; };
-		E511F9681A60ED9100C93E86 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F9671A60ED9100C93E86 /* ScheduleViewController.swift */; };
+		E511F9661A60ED9100C93E86 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F9651A60ED9100C93E86 /* NewsViewController.swift */; };
+		E511F9681A60ED9100C93E86 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F9671A60ED9100C93E86 /* MapViewController.swift */; };
 		E511F96B1A60ED9100C93E86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E511F9691A60ED9100C93E86 /* Main.storyboard */; };
 		E511F96D1A60ED9100C93E86 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E511F96C1A60ED9100C93E86 /* Images.xcassets */; };
 		E511F9701A60ED9100C93E86 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E511F96E1A60ED9100C93E86 /* LaunchScreen.xib */; };
@@ -52,6 +53,7 @@
 		8219A18D1A622B2A00933D54 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		8219A18F1A622B3400933D54 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		827E9CC41A742BB600DC4D4E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		82AE29D41A75A6A80004FDB3 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		82BC50FC1A60F3E1002503F1 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../Frameworks/Bolts.framework; sourceTree = "<group>"; };
 		82BC50FD1A60F3E1002503F1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../Frameworks/Parse.framework; sourceTree = "<group>"; };
 		82BC50FE1A60F3E1002503F1 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = ../Frameworks/ParseCrashReporting.framework; sourceTree = "<group>"; };
@@ -60,8 +62,8 @@
 		E511F95E1A60ED9100C93E86 /* Neekon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neekon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E511F9621A60ED9100C93E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E511F9631A60ED9100C93E86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E511F9651A60ED9100C93E86 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		E511F9671A60ED9100C93E86 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		E511F9651A60ED9100C93E86 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		E511F9671A60ED9100C93E86 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		E511F96A1A60ED9100C93E86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E511F96C1A60ED9100C93E86 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E511F96F1A60ED9100C93E86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -129,8 +131,9 @@
 		E5050FF21A709FB700ACFF66 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E511F9651A60ED9100C93E86 /* HomeViewController.swift */,
-				E511F9671A60ED9100C93E86 /* ScheduleViewController.swift */,
+				E511F9651A60ED9100C93E86 /* NewsViewController.swift */,
+				E511F9671A60ED9100C93E86 /* MapViewController.swift */,
+				82AE29D41A75A6A80004FDB3 /* ScheduleViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -254,11 +257,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E511F9681A60ED9100C93E86 /* ScheduleViewController.swift in Sources */,
+				E511F9681A60ED9100C93E86 /* MapViewController.swift in Sources */,
 				E511F9641A60ED9100C93E86 /* AppDelegate.swift in Sources */,
-				E511F9661A60ED9100C93E86 /* HomeViewController.swift in Sources */,
+				E511F9661A60ED9100C93E86 /* NewsViewController.swift in Sources */,
 				E511F98B1A63011F00C93E86 /* MapObject.swift in Sources */,
 				E511F9871A62FE3C00C93E86 /* NewsObject.swift in Sources */,
+				82AE29D51A75A6A80004FDB3 /* ScheduleViewController.swift in Sources */,
 				E511F9891A63008E00C93E86 /* ScheduleObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
