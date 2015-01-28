@@ -9,8 +9,34 @@
 import Foundation
 import Parse
 
-class NewsObject : PFObject {
-    var title : String = ""
-    var content : String = ""
-    var dateCreated : NSDate = NSDate()
+class NewsObject : PFObject, PFSubclassing {
+    dynamic var title : String = ""
+    dynamic var content : String = ""
+    dynamic var dateCreated : NSDate = NSDate()
+    
+    override class func load() {
+        self.registerSubclass()
+    }
+    class func parseClassName() -> String! {
+        return "NewsObject"
+    }
+    
+//    class func newsObjectsFromParseObject(parseObjects: [PFObject]) -> [NewsObject]? {
+//        
+//    }
+    
+    class func fetchNewsObjects(resultsBlock: ([NewsObject]!, NSError!) -> Void) {
+        let query = PFQuery(className: "News")
+        query.findObjectsInBackgroundWithBlock { (newsResults:[AnyObject]!, error:NSError?) -> Void in
+            if (error != nil) {
+                // TODO: show error
+            } else {
+                if let newsObjects = newsResults as? [PFObject] {
+                    
+                }
+            }
+        }
+
+    }
+    
 }

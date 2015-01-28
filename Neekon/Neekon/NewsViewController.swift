@@ -9,8 +9,8 @@
 import UIKit
 import Parse
 
-class HomeViewController: UIViewController {
-    var news = []
+class NewsViewController: UITableViewController {
+    var news : [NewsObject]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,14 +27,20 @@ class HomeViewController: UIViewController {
     }
 
     func fetchNews() {
-        let query = PFQuery(className: "News")
-        query.findObjectsInBackgroundWithBlock { (newsResult:[AnyObject]!, error:NSError?) -> Void in
-            if (error != nil) {
-                self.news = newsResult
-            } else {
-                // TODO: Show
-            }
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let definiteNews = self.news {
+            return definiteNews.count
+        } else {
+            return 0
         }
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("NewsCell", forIndexPath: indexPath) as UITableViewCell
+        
+        return cell
     }
 }
 
