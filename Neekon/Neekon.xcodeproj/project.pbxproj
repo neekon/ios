@@ -36,6 +36,7 @@
 		E511F9871A62FE3C00C93E86 /* NewsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F9861A62FE3C00C93E86 /* NewsObject.swift */; };
 		E511F9891A63008E00C93E86 /* ScheduleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F9881A63008E00C93E86 /* ScheduleObject.swift */; };
 		E511F98B1A63011F00C93E86 /* MapObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F98A1A63011F00C93E86 /* MapObject.swift */; };
+		E55CABD71A7894F500CF75E6 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55CABD61A7894F500CF75E6 /* NewsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		E511F9861A62FE3C00C93E86 /* NewsObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsObject.swift; sourceTree = "<group>"; };
 		E511F9881A63008E00C93E86 /* ScheduleObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleObject.swift; sourceTree = "<group>"; };
 		E511F98A1A63011F00C93E86 /* MapObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapObject.swift; sourceTree = "<group>"; };
+		E55CABD61A7894F500CF75E6 /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 		E511F9601A60ED9100C93E86 /* Neekon */ = {
 			isa = PBXGroup;
 			children = (
+				E55CABD51A7894E400CF75E6 /* Views */,
 				E5050FF21A709FB700ACFF66 /* View Controllers */,
 				E511F9851A62FDE100C93E86 /* Data Objects */,
 				E511F9631A60ED9100C93E86 /* AppDelegate.swift */,
@@ -185,6 +188,14 @@
 				E511F98A1A63011F00C93E86 /* MapObject.swift */,
 			);
 			name = "Data Objects";
+			sourceTree = "<group>";
+		};
+		E55CABD51A7894E400CF75E6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E55CABD61A7894F500CF75E6 /* NewsCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +274,7 @@
 				E511F98B1A63011F00C93E86 /* MapObject.swift in Sources */,
 				E511F9871A62FE3C00C93E86 /* NewsObject.swift in Sources */,
 				82AE29D51A75A6A80004FDB3 /* ScheduleViewController.swift in Sources */,
+				E55CABD71A7894F500CF75E6 /* NewsCell.swift in Sources */,
 				E511F9891A63008E00C93E86 /* ScheduleObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

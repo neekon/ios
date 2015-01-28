@@ -14,6 +14,9 @@ class NewsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.registerClass(NewsCell.self, forCellReuseIdentifier: "NewsCell")
+        tableView.contentInset = UIEdgeInsetsMake(UIApplication.sharedApplication().statusBarFrame.size.height + 5, 0, 0, 0)
+        tableView.allowsSelection = false
         fetchNews()
     }
 
@@ -25,8 +28,12 @@ class NewsViewController: UITableViewController {
     func updateWithNewsItems(newsItems: NSArray) {
         
     }
-
+    
     func fetchNews() {
+        NewsObject.fetchNewsObjects({ (newsObjects: [NewsObject]!, error: NSError!) -> Void in
+            self.news = newsObjects
+            self.tableView.reloadData()
+        })
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,9 +45,16 @@ class NewsViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("NewsCell", forIndexPath: indexPath) as UITableViewCell
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier("NewsCell", forIndexPath: indexPath) as NewsCell
+        let newsObject = self.news![indexPath.row]
+        cell.titleLabel.text = newsObject.title
+        cell.contentLabel.text = newsObject.content
+        cell.updateConstraints()
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 250
     }
 }
 
