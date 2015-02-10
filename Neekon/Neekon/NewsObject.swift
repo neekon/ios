@@ -10,8 +10,9 @@ import Foundation
 import Parse
 
 class NewsObject : PFObject, PFSubclassing {
-    @NSManaged var title: String
-    @NSManaged var content: String
+    @NSManaged var title: String?
+    @NSManaged var content: String?
+    @NSManaged var imageUrl: String?
     
     override class func load() {
         superclass()?.load()

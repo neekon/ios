@@ -175,12 +175,12 @@
 				E511F9851A62FDE100C93E86 /* Data Objects */,
 				E5CCE5EB1A89A5C1000BE6B8 /* Resources */,
 				E511F9631A60ED9100C93E86 /* AppDelegate.swift */,
+				82D8E75F1A89AF86008DA016 /* Globals.swift */,
 				E511F9691A60ED9100C93E86 /* Main.storyboard */,
 				E511F96C1A60ED9100C93E86 /* Images.xcassets */,
 				E511F96E1A60ED9100C93E86 /* LaunchScreen.xib */,
 				E5050FF11A709F9600ACFF66 /* Frameworks */,
 				E511F9611A60ED9100C93E86 /* Supporting Files */,
-				82D8E75F1A89AF86008DA016 /* Globals.swift */,
 			);
 			path = Neekon;
 			sourceTree = "<group>";
