@@ -37,6 +37,7 @@
 		E511F9891A63008E00C93E86 /* ScheduleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F9881A63008E00C93E86 /* ScheduleObject.swift */; };
 		E511F98B1A63011F00C93E86 /* MapObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F98A1A63011F00C93E86 /* MapObject.swift */; };
 		E55CABD71A7894F500CF75E6 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55CABD61A7894F500CF75E6 /* NewsCell.swift */; };
+		E5CCE5ED1A89A662000BE6B8 /* LaunchScreen1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E5CCE5EC1A89A662000BE6B8 /* LaunchScreen1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		E511F9881A63008E00C93E86 /* ScheduleObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleObject.swift; sourceTree = "<group>"; };
 		E511F98A1A63011F00C93E86 /* MapObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapObject.swift; sourceTree = "<group>"; };
 		E55CABD61A7894F500CF75E6 /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		E5CCE5EC1A89A662000BE6B8 /* LaunchScreen1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LaunchScreen1.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 				E55CABD51A7894E400CF75E6 /* Views */,
 				E5050FF21A709FB700ACFF66 /* View Controllers */,
 				E511F9851A62FDE100C93E86 /* Data Objects */,
+				E5CCE5EB1A89A5C1000BE6B8 /* Resources */,
 				E511F9631A60ED9100C93E86 /* AppDelegate.swift */,
 				E511F9691A60ED9100C93E86 /* Main.storyboard */,
 				E511F96C1A60ED9100C93E86 /* Images.xcassets */,
@@ -196,6 +199,14 @@
 				E55CABD61A7894F500CF75E6 /* NewsCell.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		E5CCE5EB1A89A5C1000BE6B8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E5CCE5EC1A89A662000BE6B8 /* LaunchScreen1.jpg */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5CCE5ED1A89A662000BE6B8 /* LaunchScreen1.jpg in Resources */,
 				E511F96B1A60ED9100C93E86 /* Main.storyboard in Resources */,
 				E511F9701A60ED9100C93E86 /* LaunchScreen.xib in Resources */,
 				E511F96D1A60ED9100C93E86 /* Images.xcassets in Resources */,
