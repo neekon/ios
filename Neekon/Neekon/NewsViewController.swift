@@ -47,14 +47,15 @@ class NewsViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("NewsCell", forIndexPath: indexPath) as NewsCell
         let newsObject = self.news![indexPath.row]
-        cell.titleLabel.text = newsObject.title
-        cell.contentLabel.text = newsObject.content
-        cell.updateConstraints()
+        cell.fill(newsObject.title, content: newsObject.content)
         return cell
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 250
+        let newsObject = self.news![indexPath.row]
+        let height = NewsCell.getHeightGivenContent(newsObject.content, width: self.view.frame.width - MARGIN * 2)
+        
+        return height
     }
 }
 
