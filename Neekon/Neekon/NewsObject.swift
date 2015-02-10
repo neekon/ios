@@ -10,8 +10,9 @@ import Foundation
 import Parse
 
 class NewsObject : PFObject, PFSubclassing {
-    @NSManaged var title: String
-    @NSManaged var content: String
+    @NSManaged var title: String?
+    @NSManaged var content: String?
+    @NSManaged var imageUrl: String?
     
     override class func load() {
         superclass()?.load()
@@ -31,7 +32,6 @@ class NewsObject : PFObject, PFSubclassing {
                 if let objects = results {
                     var newsObjects = [NewsObject]()
                     for newsObject in objects as [NewsObject] {
-                        println("news: \(newsObject.title) content: \(newsObject.content)")
                         newsObjects.append(newsObject)
                     }
                     resultsBlock(newsObjects, nil)

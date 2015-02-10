@@ -11,7 +11,8 @@ import UIKit
 class NewsCell: UITableViewCell {
     let titleLabel = UILabel()
     let contentLabel = UILabel()
-    
+    let mainImageView = UIImageView()
+    let IMAGE_HEIGHT = 100.0
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -20,13 +21,15 @@ class NewsCell: UITableViewCell {
         titleLabel.numberOfLines = 1
         titleLabel.font = UIFont(name: "HelveticaNeue", size: 30)
         
+        mainImageView.image = UIImage()
+        
         contentLabel.text = ""
         contentLabel.numberOfLines = 0
         contentLabel.font = UIFont(name: "HelveticaNeue", size: 14)
         
-        self.addSubview(titleLabel)
-        self.addSubview(contentLabel)
-
+        addSubview(titleLabel)
+        addSubview(mainImageView)
+        addSubview(contentLabel)
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -36,11 +39,12 @@ class NewsCell: UITableViewCell {
     override func updateConstraints() {
         super.updateConstraints()
         titleLabel.frame = CGRectMake(MARGIN, MARGIN, self.frame.size.width - MARGIN * 2, 35)
+        
         let sizeThatFits = contentLabel.sizeThatFits(CGSize(width: frame.size.width - MARGIN * 2, height: CGFloat(FLT_MAX)))
         contentLabel.frame = CGRectMake(MARGIN, MARGIN + titleLabel.frame.size.height + MARGIN, sizeThatFits.width, sizeThatFits.height)
     }
     
-    class func getHeightGivenContent(content: String, width: CGFloat) -> CGFloat {
+    class func getHeightGivenContent(content: String?, imageUrl: String?, width: CGFloat) -> CGFloat {
         var height = MARGIN + 35.0 + MARGIN
         
         let contentLabel = UILabel()
@@ -52,12 +56,34 @@ class NewsCell: UITableViewCell {
         
         height += sizeThatFits.height + MARGIN
         
+        
+        // image
+        if imageUrl != nil {
+            height += 100.0 // IMAGE_HEIGHT
+        }
+        
+        
         return height
     }
     
-    func fill(title: NSString, content: NSString) {
+    func fill(title: NSString?, content: NSString?, imageUrl: NSString?) {
+
         titleLabel.text = title
         contentLabel.text = content
+        setImageViewImage(forImageView: mainImageView, fromImageUrl: imageUrl)
+
         updateConstraints()
+    }
+    
+    private func setImageViewImage(forImageView imageView: UIImageView, fromImageUrl imageUrl: NSString?) {
+        if imageUrl != nil {
+            if let url = NSURL(string: imageUrl!) {
+                if let data = NSData(contentsOfURL: url) {
+                    if let image = UIImage(data: data) {
+                        imageView.image = image
+                    }
+                }
+            }
+        }
     }
 }
