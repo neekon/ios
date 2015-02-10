@@ -40,17 +40,17 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Schedule" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Schedule" image="schedule-icon.png" id="cPa-gy-q4n"/>
                     <navigationItem key="navigationItem" id="jMT-fe-l31"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1308" y="-724"/>
         </scene>
-        <!--Home-->
+        <!--Schedule-->
         <scene sceneID="E83-Qp-96L">
             <objects>
-                <navigationController title="Home" id="1RP-71-6IB" customClass="MainNavigationController" customModule="Neekon" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController title="Home" id="1RP-71-6IB" userLabel="Schedule" customClass="MainNavigationController" customModule="Neekon" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="irj-mb-prg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="656-Sa-cAP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -68,7 +68,7 @@
         <scene sceneID="cKj-nc-bku">
             <objects>
                 <navigationController title="Home" id="Yst-ID-BPB" customClass="MainNavigationController" customModule="Neekon" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="dtj-gC-ptU"/>
+                    <tabBarItem key="tabBarItem" title="Home" id="dtj-gC-ptU"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="c4s-xO-rxC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -94,7 +94,7 @@
                             <outlet property="delegate" destination="u14-6K-hHW" id="Ur6-xN-dFz"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="News" image="first" badgeValue="1" id="zjy-xh-UFH"/>
+                    <tabBarItem key="tabBarItem" title="News" image="home-icon.png" id="zjy-xh-UFH"/>
                     <navigationItem key="navigationItem" id="HX5-vX-Ne4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vc2-4z-667" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -121,11 +121,12 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Item-->
+        <!--Map-->
         <scene sceneID="foC-01-TIU">
             <objects>
-                <navigationController id="kqv-lk-JSP" customClass="MainNavigationController" customModule="Neekon" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="RKc-Ar-Y47"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VAu-B1-ElF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="kqv-lk-JSP" userLabel="Map" customClass="MainNavigationController" customModule="Neekon" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Map" id="RKc-Ar-Y47" userLabel="Map"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jl8-4o-XXt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -134,7 +135,6 @@
                         <segue destination="PU1-sG-b44" kind="relationship" relationship="rootViewController" id="Sbw-vi-kBH"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VAu-B1-ElF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8" y="864"/>
         </scene>
@@ -183,7 +183,7 @@
                             <constraint firstItem="kSe-hM-1yv" firstAttribute="trailing" secondItem="V4F-2C-wSa" secondAttribute="trailingMargin" id="uzU-gu-dB1"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" image="second" id="xFN-lp-91F" userLabel="Map"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="location-icon.png" id="xFN-lp-91F" userLabel="Map"/>
                     <navigationItem key="navigationItem" id="lze-i9-fFa"/>
                     <connections>
                         <outlet property="addressLabel" destination="kSe-hM-1yv" id="a0S-6U-fuu"/>
@@ -201,7 +201,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="home-icon.png" width="29" height="27"/>
+        <image name="location-icon.png" width="20" height="27"/>
+        <image name="schedule-icon.png" width="23" height="27"/>
     </resources>
 </document>

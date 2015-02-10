@@ -17,7 +17,6 @@ class NewsViewController: UITableViewController {
         tableView.registerClass(NewsCell.self, forCellReuseIdentifier: "NewsCell")
         tableView.contentInset = UIEdgeInsetsMake(UIApplication.sharedApplication().statusBarFrame.size.height + 5, 0, 0, 0)
         tableView.allowsSelection = false
-       // self.title = "WOW"
         
         let titleImage = UIImage(named: "navigation-top-bar-logo")
         let titleView = UIImageView(image: titleImage)
@@ -27,7 +26,7 @@ class NewsViewController: UITableViewController {
         self.navigationItem.titleView = titleView
         
         self.view.backgroundColor = UIColor.clearColor()
-
+        
         fetchNews()
     }
 

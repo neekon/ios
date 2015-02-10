@@ -13,6 +13,15 @@ class ScheduleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let titleImage = UIImage(named: "navigation-top-bar-logo")
+        let titleView = UIImageView(image: titleImage)
+        titleView.frame = CGRectMake(0, 0, 150, 40)
+        titleView.contentMode = UIViewContentMode.ScaleAspectFit
+        
+        self.navigationItem.titleView = titleView
+        
+        self.view.backgroundColor = UIColor.clearColor()
+
         // Do any additional setup after loading the view.
     }
 
