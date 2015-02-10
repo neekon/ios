@@ -44,7 +44,7 @@ class NewsCell: UITableViewCell {
         contentLabel.frame = CGRectMake(MARGIN, MARGIN + titleLabel.frame.size.height + MARGIN, sizeThatFits.width, sizeThatFits.height)
     }
     
-    class func getHeightGivenContent(content: String, width: CGFloat) -> CGFloat {
+    class func getHeightGivenContent(content: String?, imageUrl: String?, width: CGFloat) -> CGFloat {
         var height = MARGIN + 35.0 + MARGIN
         
         let contentLabel = UILabel()
@@ -56,24 +56,34 @@ class NewsCell: UITableViewCell {
         
         height += sizeThatFits.height + MARGIN
         
+        
+        // image
+        if imageUrl != nil {
+            height += 100.0 // IMAGE_HEIGHT
+        }
+        
+        
         return height
     }
     
-    func fill(title: NSString, content: NSString?, imageUrl: NSString?) {
+    func fill(title: NSString?, content: NSString?, imageUrl: NSString?) {
+
         titleLabel.text = title
-        
-        if content != nil {
-            contentLabel.text = content
-        }
+        contentLabel.text = content
+        setImageViewImage(forImageView: mainImageView, fromImageUrl: imageUrl)
+
+        updateConstraints()
+    }
+    
+    private func setImageViewImage(forImageView imageView: UIImageView, fromImageUrl imageUrl: NSString?) {
         if imageUrl != nil {
             if let url = NSURL(string: imageUrl!) {
                 if let data = NSData(contentsOfURL: url) {
                     if let image = UIImage(data: data) {
-                        mainImageView.image = image
+                        imageView.image = image
                     }
                 }
             }
         }
-        updateConstraints()
     }
 }

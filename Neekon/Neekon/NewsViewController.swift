@@ -27,6 +27,8 @@ class NewsViewController: UITableViewController {
         self.navigationItem.titleView = titleView
         
         self.view.backgroundColor = UIColor.clearColor()
+        
+        tableView.separatorStyle = .None
 
         fetchNews()
     }
@@ -64,9 +66,8 @@ class NewsViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         let newsObject = self.news![indexPath.row]
-        let height = NewsCell.getHeightGivenContent(newsObject.content, width: self.view.frame.width - MARGIN * 2)
         
-        return height
+        return NewsCell.getHeightGivenContent(newsObject.content, imageUrl: newsObject.imageUrl, width: view.frame.width - MARGIN * 2)
     }
 }
 

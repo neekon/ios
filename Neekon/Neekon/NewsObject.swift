@@ -32,7 +32,6 @@ class NewsObject : PFObject, PFSubclassing {
                 if let objects = results {
                     var newsObjects = [NewsObject]()
                     for newsObject in objects as [NewsObject] {
-                        println("news: \(newsObject.title) content: \(newsObject.content)")
                         newsObjects.append(newsObject)
                     }
                     resultsBlock(newsObjects, nil)
