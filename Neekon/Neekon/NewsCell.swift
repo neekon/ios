@@ -15,7 +15,7 @@ class NewsCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
+        self.backgroundColor = UIColor.clearColor()
         titleLabel.text = ""
         titleLabel.numberOfLines = 1
         titleLabel.font = UIFont(name: "HelveticaNeue", size: 30)

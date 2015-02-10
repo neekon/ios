@@ -41,10 +41,45 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Schedule" image="second" id="cPa-gy-q4n"/>
+                    <navigationItem key="navigationItem" id="jMT-fe-l31"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="756" y="0.0"/>
+            <point key="canvasLocation" x="1308" y="-724"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="E83-Qp-96L">
+            <objects>
+                <navigationController title="Home" id="1RP-71-6IB" customClass="MainNavigationController" customModule="Neekon" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="irj-mb-prg"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="656-Sa-cAP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="LDU-LQ-tXc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SGS-Ez-Sba" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="148" y="-750"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="cKj-nc-bku">
+            <objects>
+                <navigationController title="Home" id="Yst-ID-BPB" customClass="MainNavigationController" customModule="Neekon" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="dtj-gC-ptU"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="c4s-xO-rxC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="u14-6K-hHW" kind="relationship" relationship="rootViewController" id="SIi-NU-pRg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ahv-Bv-moM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="836" y="0.0"/>
         </scene>
         <!--News-->
         <scene sceneID="hec-Ef-1VA">
@@ -60,10 +95,11 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="News" image="first" badgeValue="1" id="zjy-xh-UFH"/>
+                    <navigationItem key="navigationItem" id="HX5-vX-Ne4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vc2-4z-667" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="756" y="-812"/>
+            <point key="canvasLocation" x="1744" y="52"/>
         </scene>
         <!--TitleISHere-->
         <scene sceneID="yl2-sM-qoP">
@@ -76,14 +112,31 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="u14-6K-hHW" kind="relationship" relationship="viewControllers" id="JMS-5S-ttm"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="PU1-sG-b44" kind="relationship" relationship="viewControllers" id="Jak-Ia-ehQ"/>
+                        <segue destination="Yst-ID-BPB" kind="relationship" relationship="viewControllers" id="LCp-xo-T8Q"/>
+                        <segue destination="1RP-71-6IB" kind="relationship" relationship="viewControllers" id="36e-t8-D9u"/>
+                        <segue destination="kqv-lk-JSP" kind="relationship" relationship="viewControllers" id="Ttz-FA-26M"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="foC-01-TIU">
+            <objects>
+                <navigationController id="kqv-lk-JSP" customClass="MainNavigationController" customModule="Neekon" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="RKc-Ar-Y47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jl8-4o-XXt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="PU1-sG-b44" kind="relationship" relationship="rootViewController" id="Sbw-vi-kBH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VAu-B1-ElF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8" y="864"/>
         </scene>
         <!--Map-->
         <scene sceneID="bKV-0I-vEk">
@@ -97,16 +150,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bYi-pF-2mt">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bYi-pF-2mt">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="464"/>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address: San Francisco, CA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSe-hM-1yv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Address: San Francisco, CA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSe-hM-1yv">
                                 <rect key="frame" x="16" y="472" width="568" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFm-T3-3HC">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFm-T3-3HC">
                                 <rect key="frame" x="486" y="497" width="98" height="30"/>
                                 <gestureRecognizers/>
                                 <state key="normal" title="Get Directions">
@@ -131,6 +184,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="second" id="xFN-lp-91F" userLabel="Map"/>
+                    <navigationItem key="navigationItem" id="lze-i9-fFa"/>
                     <connections>
                         <outlet property="addressLabel" destination="kSe-hM-1yv" id="a0S-6U-fuu"/>
                         <outlet property="mapView" destination="bYi-pF-2mt" id="qWl-Ht-Ago"/>
@@ -143,7 +197,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="756" y="811"/>
+            <point key="canvasLocation" x="1024" y="864"/>
         </scene>
     </scenes>
     <resources>

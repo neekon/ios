@@ -11,12 +11,23 @@ import Parse
 
 class NewsViewController: UITableViewController {
     var news : [NewsObject]?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.registerClass(NewsCell.self, forCellReuseIdentifier: "NewsCell")
         tableView.contentInset = UIEdgeInsetsMake(UIApplication.sharedApplication().statusBarFrame.size.height + 5, 0, 0, 0)
         tableView.allowsSelection = false
+       // self.title = "WOW"
+        
+        let titleImage = UIImage(named: "navigation-top-bar-logo")
+        let titleView = UIImageView(image: titleImage)
+        titleView.frame = CGRectMake(0, 0, 150, 40)
+        titleView.contentMode = UIViewContentMode.ScaleAspectFit
+        
+        self.navigationItem.titleView = titleView
+        
+        self.view.backgroundColor = UIColor.clearColor()
+
         fetchNews()
     }
 
