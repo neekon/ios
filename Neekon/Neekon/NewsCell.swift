@@ -35,13 +35,34 @@ class NewsCell: UITableViewCell {
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override func updateConstraints() {
         super.updateConstraints()
-        titleLabel.frame = CGRectMake(MARGIN, MARGIN, self.frame.size.width - MARGIN * 2, 35)
-        
+
+        titleLabel.snp_makeConstraints { make in
+            make.top.equalTo(self.superview!.snp_top).with.offset(MARGIN)
+            make.left.equalTo(self.superview!.snp_left).width.offset(MARGIN)
+            make.right.equalTo(self.superview!.snp_right).with.offset(MARGIN)
+            make.height.equalTo(35)
+            return
+        }
+
         let sizeThatFits = contentLabel.sizeThatFits(CGSize(width: frame.size.width - MARGIN * 2, height: CGFloat(FLT_MAX)))
-        contentLabel.frame = CGRectMake(MARGIN, MARGIN + titleLabel.frame.size.height + MARGIN, sizeThatFits.width, sizeThatFits.height)
+        contentLabel.snp_makeConstraints { make in
+            make.top.equalTo(self.titleLabel.snp_bottom).with.offset(MARGIN)
+            make.left.equalTo(self.superview!.snp_left).with.offset(MARGIN)
+            make.right.equalTo(self.superview!.snp_right).with.offset(MARGIN)
+            make.height.equalTo(sizeThatFits.height)
+            return
+        }
+
+        mainImageView.snp_makeConstraints { make in
+            make.top.equalTo(self.contentLabel.snp_bottom).with.offset(MARGIN)
+            make.left.equalTo(self.superview!.snp_left).with.offset(MARGIN)
+            make.right.equalTo(self.superview!.snp_right).with.offset(MARGIN)
+            make.height.equalTo(self.IMAGE_HEIGHT)
+            return
+        }
     }
     
     class func getHeightGivenContent(content: String?, imageUrl: String?, width: CGFloat) -> CGFloat {
@@ -55,14 +76,12 @@ class NewsCell: UITableViewCell {
         let sizeThatFits = contentLabel.sizeThatFits(CGSize(width: width, height: CGFloat(FLT_MAX)))
         
         height += sizeThatFits.height + MARGIN
-        
-        
+
         // image
         if imageUrl != nil {
-            height += 100.0 // IMAGE_HEIGHT
+            height += CGFloat(100.0) // IMAGE_HEIGHT
         }
-        
-        
+
         return height
     }
     

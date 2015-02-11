@@ -1,0 +1,3 @@
+[submodule "Neekon/Frameworks/Snap"]
+	path = Neekon/Frameworks/Snap
+	url = https://github.com/Masonry/Snap.git

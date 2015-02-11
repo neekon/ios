@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import Snap
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
