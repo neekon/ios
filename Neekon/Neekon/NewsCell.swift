@@ -22,6 +22,7 @@ class NewsCell: UITableViewCell {
         titleLabel.font = UIFont(name: "HelveticaNeue", size: 30)
         
         mainImageView.image = UIImage()
+        mainImageView.contentMode = UIViewContentMode.ScaleAspectFill
         
         contentLabel.text = ""
         contentLabel.numberOfLines = 0
@@ -42,7 +43,7 @@ class NewsCell: UITableViewCell {
         titleLabel.snp_makeConstraints { make in
             make.top.equalTo(self.snp_top).with.offset(MARGIN)
             make.left.equalTo(self.snp_left).width.offset(MARGIN)
-            make.right.equalTo(self.snp_right).with.offset(MARGIN)
+            make.right.equalTo(self.snp_right).with.offset(-MARGIN)
             make.height.equalTo(35)
             return
         }
@@ -51,7 +52,7 @@ class NewsCell: UITableViewCell {
         contentLabel.snp_makeConstraints { make in
             make.top.equalTo(self.titleLabel.snp_bottom).with.offset(MARGIN)
             make.left.equalTo(self.snp_left).with.offset(MARGIN)
-            make.right.equalTo(self.snp_right).with.offset(MARGIN)
+            make.right.equalTo(self.snp_right).with.offset(-MARGIN)
             make.height.equalTo(sizeThatFits.height)
             return
         }
@@ -59,7 +60,7 @@ class NewsCell: UITableViewCell {
         mainImageView.snp_makeConstraints { make in
             make.top.equalTo(self.contentLabel.snp_bottom).with.offset(MARGIN)
             make.left.equalTo(self.snp_left).with.offset(MARGIN)
-            make.right.equalTo(self.snp_right).with.offset(MARGIN)
+            make.right.equalTo(self.snp_right).with.offset(-MARGIN)
             make.height.equalTo(self.IMAGE_HEIGHT)
             return
         }
