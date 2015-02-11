@@ -37,6 +37,14 @@
 		E511F9871A62FE3C00C93E86 /* NewsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F9861A62FE3C00C93E86 /* NewsObject.swift */; };
 		E511F9891A63008E00C93E86 /* ScheduleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F9881A63008E00C93E86 /* ScheduleObject.swift */; };
 		E511F98B1A63011F00C93E86 /* MapObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F98A1A63011F00C93E86 /* MapObject.swift */; };
+		E537AD451A8B357B00275387 /* View+Snap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E537AD3D1A8B357B00275387 /* View+Snap.swift */; };
+		E537AD461A8B357B00275387 /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E537AD3E1A8B357B00275387 /* ConstraintMaker.swift */; };
+		E537AD471A8B357B00275387 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E537AD3F1A8B357B00275387 /* Constraint.swift */; };
+		E537AD481A8B357B00275387 /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E537AD401A8B357B00275387 /* ConstraintItem.swift */; };
+		E537AD491A8B357B00275387 /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E537AD411A8B357B00275387 /* ConstraintAttributes.swift */; };
+		E537AD4A1A8B357B00275387 /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E537AD421A8B357B00275387 /* ConstraintRelation.swift */; };
+		E537AD4B1A8B357B00275387 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E537AD431A8B357B00275387 /* LayoutConstraint.swift */; };
+		E537AD4C1A8B357B00275387 /* EdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = E537AD441A8B357B00275387 /* EdgeInsets.swift */; };
 		E55CABD71A7894F500CF75E6 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55CABD61A7894F500CF75E6 /* NewsCell.swift */; };
 		E56972EA1A89B59F00791EBF /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56972E91A89B59F00791EBF /* MainNavigationController.swift */; };
 		E56972EC1A89B92300791EBF /* navigation-top-bar-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E56972EB1A89B92300791EBF /* navigation-top-bar-logo.png */; };
@@ -71,7 +79,6 @@
 		82BC50FE1A60F3E1002503F1 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = ../Frameworks/ParseCrashReporting.framework; sourceTree = "<group>"; };
 		82BC50FF1A60F3E1002503F1 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = ../Frameworks/ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		82BC51001A60F3E1002503F1 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = ../Frameworks/ParseUI.framework; sourceTree = "<group>"; };
-		82CF051E1A8AD0950090CDC0 /* Snap.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Snap.xcodeproj; path = ../Frameworks/Snap/Snap.xcodeproj; sourceTree = "<group>"; };
 		82D8E75F1A89AF86008DA016 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		E511F95E1A60ED9100C93E86 /* Neekon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neekon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E511F9621A60ED9100C93E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,6 +91,14 @@
 		E511F9861A62FE3C00C93E86 /* NewsObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsObject.swift; sourceTree = "<group>"; };
 		E511F9881A63008E00C93E86 /* ScheduleObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleObject.swift; sourceTree = "<group>"; };
 		E511F98A1A63011F00C93E86 /* MapObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapObject.swift; sourceTree = "<group>"; };
+		E537AD3D1A8B357B00275387 /* View+Snap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Snap.swift"; sourceTree = "<group>"; };
+		E537AD3E1A8B357B00275387 /* ConstraintMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMaker.swift; sourceTree = "<group>"; };
+		E537AD3F1A8B357B00275387 /* Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
+		E537AD401A8B357B00275387 /* ConstraintItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintItem.swift; sourceTree = "<group>"; };
+		E537AD411A8B357B00275387 /* ConstraintAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintAttributes.swift; sourceTree = "<group>"; };
+		E537AD421A8B357B00275387 /* ConstraintRelation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintRelation.swift; sourceTree = "<group>"; };
+		E537AD431A8B357B00275387 /* LayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstraint.swift; sourceTree = "<group>"; };
+		E537AD441A8B357B00275387 /* EdgeInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EdgeInsets.swift; sourceTree = "<group>"; };
 		E55CABD61A7894F500CF75E6 /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		E56972E91A89B59F00791EBF /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		E56972EB1A89B92300791EBF /* navigation-top-bar-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation-top-bar-logo.png"; sourceTree = "<group>"; };
@@ -130,7 +145,6 @@
 		E5050FF11A709F9600ACFF66 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				82CF051E1A8AD0950090CDC0 /* Snap.xcodeproj */,
 				827E9CC41A742BB600DC4D4E /* MapKit.framework */,
 				8219A18F1A622B3400933D54 /* libsqlite3.dylib */,
 				8219A18D1A622B2A00933D54 /* libz.dylib */,
@@ -184,6 +198,7 @@
 		E511F9601A60ED9100C93E86 /* Neekon */ = {
 			isa = PBXGroup;
 			children = (
+				E537AD3C1A8B357200275387 /* Snap */,
 				E55CABD51A7894E400CF75E6 /* Views */,
 				E5050FF21A709FB700ACFF66 /* View Controllers */,
 				E511F9851A62FDE100C93E86 /* Data Objects */,
@@ -215,6 +230,21 @@
 				E511F98A1A63011F00C93E86 /* MapObject.swift */,
 			);
 			name = "Data Objects";
+			sourceTree = "<group>";
+		};
+		E537AD3C1A8B357200275387 /* Snap */ = {
+			isa = PBXGroup;
+			children = (
+				E537AD3D1A8B357B00275387 /* View+Snap.swift */,
+				E537AD3E1A8B357B00275387 /* ConstraintMaker.swift */,
+				E537AD3F1A8B357B00275387 /* Constraint.swift */,
+				E537AD401A8B357B00275387 /* ConstraintItem.swift */,
+				E537AD411A8B357B00275387 /* ConstraintAttributes.swift */,
+				E537AD421A8B357B00275387 /* ConstraintRelation.swift */,
+				E537AD431A8B357B00275387 /* LayoutConstraint.swift */,
+				E537AD441A8B357B00275387 /* EdgeInsets.swift */,
+			);
+			name = Snap;
 			sourceTree = "<group>";
 		};
 		E55CABD51A7894E400CF75E6 /* Views */ = {
@@ -322,14 +352,22 @@
 			files = (
 				E56972EA1A89B59F00791EBF /* MainNavigationController.swift in Sources */,
 				E511F9681A60ED9100C93E86 /* MapViewController.swift in Sources */,
+				E537AD4C1A8B357B00275387 /* EdgeInsets.swift in Sources */,
 				E511F9641A60ED9100C93E86 /* AppDelegate.swift in Sources */,
+				E537AD491A8B357B00275387 /* ConstraintAttributes.swift in Sources */,
+				E537AD451A8B357B00275387 /* View+Snap.swift in Sources */,
 				E511F9661A60ED9100C93E86 /* NewsViewController.swift in Sources */,
+				E537AD4A1A8B357B00275387 /* ConstraintRelation.swift in Sources */,
+				E537AD461A8B357B00275387 /* ConstraintMaker.swift in Sources */,
 				E511F98B1A63011F00C93E86 /* MapObject.swift in Sources */,
+				E537AD481A8B357B00275387 /* ConstraintItem.swift in Sources */,
 				E511F9871A62FE3C00C93E86 /* NewsObject.swift in Sources */,
 				82AE29D51A75A6A80004FDB3 /* ScheduleViewController.swift in Sources */,
 				E55CABD71A7894F500CF75E6 /* NewsCell.swift in Sources */,
 				E511F9891A63008E00C93E86 /* ScheduleObject.swift in Sources */,
+				E537AD4B1A8B357B00275387 /* LayoutConstraint.swift in Sources */,
 				82D8E7601A89AF86008DA016 /* Globals.swift in Sources */,
+				E537AD471A8B357B00275387 /* Constraint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,7 +480,7 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = Neekon/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -458,7 +496,7 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = Neekon/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
