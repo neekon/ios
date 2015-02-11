@@ -8,11 +8,12 @@
 
 import UIKit
 
+private let IMAGE_HEIGHT = CGFloat(220.0)
+
 class NewsCell: UITableViewCell {
     let titleLabel = UILabel()
     let contentLabel = UILabel()
     let mainImageView = UIImageView()
-    let IMAGE_HEIGHT = 100.0
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -22,7 +23,7 @@ class NewsCell: UITableViewCell {
         titleLabel.font = UIFont(name: "HelveticaNeue", size: 30)
         
         mainImageView.image = UIImage()
-        mainImageView.contentMode = UIViewContentMode.ScaleAspectFill
+        mainImageView.contentMode = UIViewContentMode.Redraw
         
         contentLabel.text = ""
         contentLabel.numberOfLines = 0
@@ -61,7 +62,7 @@ class NewsCell: UITableViewCell {
             make.top.equalTo(self.contentLabel.snp_bottom).with.offset(MARGIN)
             make.left.equalTo(self.snp_left).with.offset(MARGIN)
             make.right.equalTo(self.snp_right).with.offset(-MARGIN)
-            make.height.equalTo(self.IMAGE_HEIGHT)
+            make.height.equalTo(IMAGE_HEIGHT)
             return
         }
     }
@@ -80,7 +81,7 @@ class NewsCell: UITableViewCell {
 
         // image
         if imageUrl != nil {
-            height += CGFloat(100.0) // IMAGE_HEIGHT
+            height += IMAGE_HEIGHT + MARGIN * 2
         }
 
         return height
@@ -90,20 +91,16 @@ class NewsCell: UITableViewCell {
 
         titleLabel.text = title
         contentLabel.text = content
-        setImageViewImage(forImageView: mainImageView, fromImageUrl: imageUrl)
-
-        updateConstraints()
-    }
-    
-    private func setImageViewImage(forImageView imageView: UIImageView, fromImageUrl imageUrl: NSString?) {
         if imageUrl != nil {
             if let url = NSURL(string: imageUrl!) {
                 if let data = NSData(contentsOfURL: url) {
                     if let image = UIImage(data: data) {
-                        imageView.image = image
+                        mainImageView.image = image
                     }
                 }
             }
         }
+
+        updateConstraints()
     }
 }
