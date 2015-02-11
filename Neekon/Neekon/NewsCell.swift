@@ -40,9 +40,9 @@ class NewsCell: UITableViewCell {
         super.updateConstraints()
 
         titleLabel.snp_makeConstraints { make in
-            make.top.equalTo(self.superview!.snp_top).with.offset(MARGIN)
-            make.left.equalTo(self.superview!.snp_left).width.offset(MARGIN)
-            make.right.equalTo(self.superview!.snp_right).with.offset(MARGIN)
+            make.top.equalTo(self.snp_top).with.offset(MARGIN)
+            make.left.equalTo(self.snp_left).width.offset(MARGIN)
+            make.right.equalTo(self.snp_right).with.offset(MARGIN)
             make.height.equalTo(35)
             return
         }
@@ -50,16 +50,16 @@ class NewsCell: UITableViewCell {
         let sizeThatFits = contentLabel.sizeThatFits(CGSize(width: frame.size.width - MARGIN * 2, height: CGFloat(FLT_MAX)))
         contentLabel.snp_makeConstraints { make in
             make.top.equalTo(self.titleLabel.snp_bottom).with.offset(MARGIN)
-            make.left.equalTo(self.superview!.snp_left).with.offset(MARGIN)
-            make.right.equalTo(self.superview!.snp_right).with.offset(MARGIN)
+            make.left.equalTo(self.snp_left).with.offset(MARGIN)
+            make.right.equalTo(self.snp_right).with.offset(MARGIN)
             make.height.equalTo(sizeThatFits.height)
             return
         }
 
         mainImageView.snp_makeConstraints { make in
             make.top.equalTo(self.contentLabel.snp_bottom).with.offset(MARGIN)
-            make.left.equalTo(self.superview!.snp_left).with.offset(MARGIN)
-            make.right.equalTo(self.superview!.snp_right).with.offset(MARGIN)
+            make.left.equalTo(self.snp_left).with.offset(MARGIN)
+            make.right.equalTo(self.snp_right).with.offset(MARGIN)
             make.height.equalTo(self.IMAGE_HEIGHT)
             return
         }
