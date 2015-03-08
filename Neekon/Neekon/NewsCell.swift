@@ -40,7 +40,7 @@ class NewsCell: UITableViewCell {
 
     override func updateConstraints() {
         super.updateConstraints()
-
+        
         titleLabel.snp_makeConstraints { make in
             make.top.equalTo(self.snp_top).with.offset(MARGIN)
             make.left.equalTo(self.snp_left).width.offset(MARGIN)
@@ -93,11 +93,16 @@ class NewsCell: UITableViewCell {
         contentLabel.text = content
         if imageUrl != nil {
             if let url = NSURL(string: imageUrl!) {
-                if let data = NSData(contentsOfURL: url) {
-                    if let image = UIImage(data: data) {
-                        mainImageView.image = image
+                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), { () -> Void in
+                    if let data = NSData(contentsOfURL: url) {
+                        if let image = UIImage(data: data) {
+                            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                                self.mainImageView.image = image
+                            })
+                        }
                     }
-                }
+                })
+
             }
         }
 
