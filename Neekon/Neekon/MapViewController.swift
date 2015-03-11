@@ -44,7 +44,7 @@ class MapViewController: UIViewController {
     }
 
     @IBAction func didTapGetDirection(sender: AnyObject) {
-        NSLog("didTapGetDirection")
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -53,7 +53,7 @@ class MapViewController: UIViewController {
     }
 
     func fetchSchedule() {
-        let query = PFQuery(className: "Schedule")
+        let query = PFQuery(className: "EventInfo")
         query.findObjectsInBackgroundWithBlock { (results:[AnyObject]!, error:NSError?) -> Void in
             if error != nil {
                 // TODO: Show Error to user
@@ -71,12 +71,12 @@ class MapViewController: UIViewController {
     }
     
     func updateAddress() {
-        let address = schedule.objectForKey("location") as NSString
+        let address = schedule.objectForKey("locationName") as NSString
         addressLabel.text = "Address: \(address)"
     }
     
     func updateMap() {
-        let address = schedule.objectForKey("location") as NSString
+        let address = schedule.objectForKey("locationName") as NSString
         let latitude = schedule.objectForKey("latitude") as NSString
         let longitude = schedule.objectForKey("longitude") as NSString
         
