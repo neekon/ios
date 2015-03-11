@@ -50,7 +50,7 @@ class MapViewController: UIViewController {
     }
 
     @IBAction func didTapGetDirection(sender: AnyObject) {
-        NSLog("didTapGetDirection")
+        
     }
     
     override func didReceiveMemoryWarning() {
