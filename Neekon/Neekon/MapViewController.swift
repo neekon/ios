@@ -12,18 +12,6 @@ import Parse
 
 class MapViewController: UIViewController {
     
-//    // Use a computed property for schedule to trigger updates when it's set after network calls
-//    var scheduleItem:PFObject!
-//    var schedule:PFObject! {
-//        set {
-//            scheduleItem = newValue as PFObject
-//            updateAddress()
-//            updateMap()
-//        }
-//        get {
-//           return scheduleItem
-//        }
-//    }
     var eventInfoObject:EventInfoObject?
     
     @IBOutlet weak var mapView: MKMapView!
@@ -60,7 +48,7 @@ class MapViewController: UIViewController {
     
     func updateAddress() {
         if let address = eventInfoObject?.locationName {
-            addressLabel.text = "Address: \(address)"
+            addressLabel.text = "\(address)"
         } else {
             addressLabel.text = ""
         }

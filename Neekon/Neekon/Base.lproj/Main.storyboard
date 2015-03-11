@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Schedule-->
@@ -170,44 +169,83 @@
                         <viewControllerLayoutGuide type="bottom" id="3Ta-09-FSP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="V4F-2C-wSa">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bYi-pF-2mt">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cableCar1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="IPG-P4-g9V">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                            </imageView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bYi-pF-2mt">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="464"/>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address: San Francisco, CA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSe-hM-1yv">
-                                <rect key="frame" x="16" y="472" width="568" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFm-T3-3HC">
-                                <rect key="frame" x="486" y="497" width="98" height="30"/>
-                                <gestureRecognizers/>
-                                <state key="normal" title="Get Directions">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="h1G-em-xQa" appends="YES" id="2Sv-gq-Soz"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="USN-ID-pUf" userLabel="TitleBackgroundView">
+                                <rect key="frame" x="0.0" y="523" width="375" height="95"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="San Francisco" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Db5-xM-1Ig" userLabel="LocationCity">
+                                        <rect key="frame" x="124" y="39" width="128" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFm-T3-3HC">
+                                        <rect key="frame" x="138.5" y="65" width="98" height="30"/>
+                                        <gestureRecognizers/>
+                                        <state key="normal" title="Get Directions">
+                                            <color key="titleColor" red="1" green="0.47240256629999999" blue="0.97152713079999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="h1G-em-xQa" appends="YES" id="2Sv-gq-Soz"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Golden Gate Park" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSe-hM-1yv" userLabel="LocationName">
+                                        <rect key="frame" x="107" y="8" width="161" height="24.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <size key="shadowOffset" width="1" height="1"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.51000000000000001" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Db5-xM-1Ig" secondAttribute="bottom" constant="20" id="0ye-S7-L9r"/>
+                                    <constraint firstAttribute="height" constant="95" id="Abq-WV-gyK"/>
+                                    <constraint firstItem="Db5-xM-1Ig" firstAttribute="top" secondItem="kSe-hM-1yv" secondAttribute="bottom" constant="6.5" id="JS4-Br-VZ9"/>
+                                    <constraint firstItem="uFm-T3-3HC" firstAttribute="top" secondItem="Db5-xM-1Ig" secondAttribute="bottom" constant="2.5" id="KGp-Dt-9CI"/>
+                                    <constraint firstAttribute="bottom" secondItem="uFm-T3-3HC" secondAttribute="bottom" id="rv4-yT-4Rc"/>
+                                    <constraint firstItem="kSe-hM-1yv" firstAttribute="centerX" secondItem="Db5-xM-1Ig" secondAttribute="centerX" constant="-0.5" id="zyO-wC-pDe"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0ye-S7-L9r"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="kSe-hM-1yv" firstAttribute="top" secondItem="bYi-pF-2mt" secondAttribute="bottom" constant="8" id="7Hn-T5-XQO"/>
-                            <constraint firstItem="uFm-T3-3HC" firstAttribute="top" secondItem="kSe-hM-1yv" secondAttribute="bottom" constant="8" id="CjO-yo-zDH"/>
-                            <constraint firstItem="bYi-pF-2mt" firstAttribute="leading" secondItem="V4F-2C-wSa" secondAttribute="leadingMargin" constant="-16" id="dm6-bg-NBt"/>
-                            <constraint firstItem="3Ta-09-FSP" firstAttribute="top" secondItem="uFm-T3-3HC" secondAttribute="bottom" constant="24" id="eoQ-sY-3nU"/>
-                            <constraint firstItem="uFm-T3-3HC" firstAttribute="trailing" secondItem="V4F-2C-wSa" secondAttribute="trailingMargin" id="fem-y7-qsZ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="bYi-pF-2mt" secondAttribute="trailing" constant="-16" id="jK3-wV-Un9"/>
-                            <constraint firstItem="bYi-pF-2mt" firstAttribute="top" secondItem="g8p-vo-ZCK" secondAttribute="bottom" constant="-20" id="kg7-2l-5ZK"/>
-                            <constraint firstItem="kSe-hM-1yv" firstAttribute="leading" secondItem="V4F-2C-wSa" secondAttribute="leadingMargin" id="nYE-hI-ZtL"/>
-                            <constraint firstItem="kSe-hM-1yv" firstAttribute="trailing" secondItem="V4F-2C-wSa" secondAttribute="trailingMargin" id="uzU-gu-dB1"/>
+                            <constraint firstAttribute="trailing" secondItem="USN-ID-pUf" secondAttribute="trailing" id="2ue-Hj-erK"/>
+                            <constraint firstItem="3Ta-09-FSP" firstAttribute="top" secondItem="USN-ID-pUf" secondAttribute="bottom" id="5RT-Ox-Hda"/>
+                            <constraint firstItem="3Ta-09-FSP" firstAttribute="top" secondItem="USN-ID-pUf" secondAttribute="bottom" id="Al0-an-fOm"/>
+                            <constraint firstItem="IPG-P4-g9V" firstAttribute="leading" secondItem="V4F-2C-wSa" secondAttribute="leading" id="EM5-CF-OiE"/>
+                            <constraint firstItem="IPG-P4-g9V" firstAttribute="centerX" secondItem="uFm-T3-3HC" secondAttribute="centerX" id="Q4u-Hf-F8j"/>
+                            <constraint firstItem="3Ta-09-FSP" firstAttribute="top" secondItem="IPG-P4-g9V" secondAttribute="bottom" id="Rsc-5p-zcq"/>
+                            <constraint firstItem="Db5-xM-1Ig" firstAttribute="centerX" secondItem="IPG-P4-g9V" secondAttribute="centerX" constant="0.5" id="SPS-e0-kSw"/>
+                            <constraint firstItem="USN-ID-pUf" firstAttribute="leading" secondItem="V4F-2C-wSa" secondAttribute="leading" id="e6A-HA-UOn"/>
+                            <constraint firstAttribute="trailing" secondItem="IPG-P4-g9V" secondAttribute="trailing" id="ldq-iN-OQ4"/>
+                            <constraint firstItem="IPG-P4-g9V" firstAttribute="top" secondItem="g8p-vo-ZCK" secondAttribute="bottom" id="vg1-nf-YRQ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="bYi-pF-2mt"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="location-icon.png" id="xFN-lp-91F" userLabel="Map"/>
                     <navigationItem key="navigationItem" id="lze-i9-fFa"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="addressLabel" destination="kSe-hM-1yv" id="a0S-6U-fuu"/>
                         <outlet property="mapView" destination="bYi-pF-2mt" id="qWl-Ht-Ago"/>
@@ -220,10 +258,11 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1024" y="864"/>
+            <point key="canvasLocation" x="1018" y="856"/>
         </scene>
     </scenes>
     <resources>
+        <image name="cableCar1.jpg" width="375" height="667"/>
         <image name="home-icon.png" width="29" height="27"/>
         <image name="location-icon.png" width="20" height="27"/>
         <image name="schedule-icon.png" width="23" height="27"/>
