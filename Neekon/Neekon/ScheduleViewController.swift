@@ -11,13 +11,7 @@ import EventKit
 import EventKitUI
 import Parse
 
-class NavigationController: UINavigationController, UINavigationControllerDelegate, EKEventEditViewDelegate {
-    func eventEditViewController(controller: EKEventEditViewController!, didCompleteWithAction action: EKEventEditViewAction) {
-        self.dismissViewControllerAnimated(true, completion: {})
-    }
-}
-
-class ScheduleViewController: UIViewController, UIAlertViewDelegate {
+class ScheduleViewController: UIViewController, UIAlertViewDelegate, EKEventEditViewDelegate, UINavigationControllerDelegate {
 
     @IBAction func calendarButtonPressed(sender: UIButton) {
         let store = EKEventStore()
@@ -33,11 +27,10 @@ class ScheduleViewController: UIViewController, UIAlertViewDelegate {
                 event.calendar = store.defaultCalendarForNewEvents
                 
                 let controller = EKEventEditViewController()
-                let navigationViewController = NavigationController(rootViewController: controller)
                 
                 controller.event = event
                 controller.eventStore = store
-                controller.delegate = navigationViewController
+                controller.delegate = self
                 
                 dispatch_async(dispatch_get_main_queue()) {
                     self.presentViewController(controller, animated: true, completion: {})
@@ -45,6 +38,11 @@ class ScheduleViewController: UIViewController, UIAlertViewDelegate {
             }
         }
     }
+
+    func eventEditViewController(controller: EKEventEditViewController!, didCompleteWithAction action: EKEventEditViewAction) {
+        controller.dismissViewControllerAnimated(true, completion: {})
+    }
+
     
     func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
         alertView.dismissWithClickedButtonIndex(buttonIndex, animated: true)
