@@ -38,6 +38,13 @@ class MapViewController: UIViewController {
     }
 
     @IBAction func didTapGetDirection(sender: AnyObject) {
+        if let address = eventInfoObject?.locationName {
+            if let escaped = address.stringByAddingPercentEscapesUsingEncoding(NSStringEncoding()) {
+                if let url = NSURL(string: "http://maps.apple.com/?daddr=\(escaped)") {
+                    UIApplication.sharedApplication().openURL(url)
+                }
+            }
+        }
         
     }
     
