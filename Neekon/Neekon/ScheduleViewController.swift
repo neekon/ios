@@ -36,7 +36,7 @@ class ScheduleViewController: UIViewController, UIAlertViewDelegate, EKEventEdit
                         
                         controller.event = event
                         controller.eventStore = store
-                        controller.delegate = self
+                        controller.editViewDelegate = self
                         
                         dispatch_async(dispatch_get_main_queue()) {
                             self.presentViewController(controller, animated: true, completion: {})
