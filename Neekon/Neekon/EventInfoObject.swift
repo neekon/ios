@@ -11,6 +11,7 @@ import Parse
 
 class EventInfoObject : PFObject, PFSubclassing {
     @NSManaged var eventDate : NSDate?
+    @NSManaged var eventName : String?
     @NSManaged var locationName: String?
     @NSManaged var locationCity: String?
     @NSManaged var latitude: String?

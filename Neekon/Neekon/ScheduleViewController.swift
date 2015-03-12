@@ -17,24 +17,27 @@ class ScheduleViewController: UIViewController, UIAlertViewDelegate, EKEventEdit
         let store = EKEventStore()
         store.requestAccessToEntityType(EKEntityTypeEvent) { (granted:Bool, error:NSError!) in
             if granted {
-                let eventInfo = EventInfoObject()
-                let event = EKEvent(eventStore: store)
-                event.startDate = eventInfo.eventDate
-                event.allDay = true
-                event.endDate = eventInfo.eventDate?.dateByAddingTimeInterval(24 * 60 * 60)
-                event.title = "Neekon"
-                event.location = eventInfo.locationName
-                event.calendar = store.defaultCalendarForNewEvents
-                
-                let controller = EKEventEditViewController()
-                
-                controller.event = event
-                controller.eventStore = store
-                controller.delegate = self
-                
-                dispatch_async(dispatch_get_main_queue()) {
-                    self.presentViewController(controller, animated: true, completion: {})
-                }
+                EventInfoObject.fetchEventInfoObject({ (eventInfo, error) -> Void in
+                    if (error == nil) {
+                        let event = EKEvent(eventStore: store)
+                        event.startDate = eventInfo.eventDate
+                        event.allDay = true
+                        event.endDate = eventInfo.eventDate?.dateByAddingTimeInterval(24 * 60 * 60)
+                        event.title = eventInfo.eventName
+                        event.location = eventInfo.locationName
+                        event.calendar = store.defaultCalendarForNewEvents
+                        
+                        let controller = EKEventEditViewController()
+                        
+                        controller.event = event
+                        controller.eventStore = store
+                        controller.delegate = self
+                        
+                        dispatch_async(dispatch_get_main_queue()) {
+                            self.presentViewController(controller, animated: true, completion: {})
+                        }
+                    }
+                })
             }
         }
     }
