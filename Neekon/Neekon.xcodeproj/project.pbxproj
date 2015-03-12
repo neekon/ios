@@ -38,6 +38,7 @@
 		E511F9871A62FE3C00C93E86 /* NewsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F9861A62FE3C00C93E86 /* NewsObject.swift */; };
 		E511F9891A63008E00C93E86 /* EventInfoObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F9881A63008E00C93E86 /* EventInfoObject.swift */; };
 		E511F98B1A63011F00C93E86 /* MapObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F98A1A63011F00C93E86 /* MapObject.swift */; };
+		E52F8E171AB17551003269AC /* ggparkflyover@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E52F8E161AB17551003269AC /* ggparkflyover@2x.jpg */; };
 		E537AD451A8B357B00275387 /* View+Snap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E537AD3D1A8B357B00275387 /* View+Snap.swift */; };
 		E537AD461A8B357B00275387 /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E537AD3E1A8B357B00275387 /* ConstraintMaker.swift */; };
 		E537AD471A8B357B00275387 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E537AD3F1A8B357B00275387 /* Constraint.swift */; };
@@ -94,6 +95,7 @@
 		E511F9861A62FE3C00C93E86 /* NewsObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsObject.swift; sourceTree = "<group>"; };
 		E511F9881A63008E00C93E86 /* EventInfoObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventInfoObject.swift; sourceTree = "<group>"; };
 		E511F98A1A63011F00C93E86 /* MapObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapObject.swift; sourceTree = "<group>"; };
+		E52F8E161AB17551003269AC /* ggparkflyover@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ggparkflyover@2x.jpg"; sourceTree = "<group>"; };
 		E537AD3D1A8B357B00275387 /* View+Snap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Snap.swift"; sourceTree = "<group>"; };
 		E537AD3E1A8B357B00275387 /* ConstraintMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMaker.swift; sourceTree = "<group>"; };
 		E537AD3F1A8B357B00275387 /* Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 		E5CCE5EB1A89A5C1000BE6B8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E52F8E161AB17551003269AC /* ggparkflyover@2x.jpg */,
 				E5D384EE1AAFE1630066E9E3 /* cableCar1@2x.jpg */,
 				E56972EF1A89C52100791EBF /* home-icon-active@2x.png */,
 				E56972F01A89C52100791EBF /* home-icon@2x.png */,
@@ -346,6 +349,7 @@
 				E511F9701A60ED9100C93E86 /* LaunchScreen.xib in Resources */,
 				E56972F81A89C52100791EBF /* location-icon@2x.png in Resources */,
 				E511F96D1A60ED9100C93E86 /* Images.xcassets in Resources */,
+				E52F8E171AB17551003269AC /* ggparkflyover@2x.jpg in Resources */,
 				E56972F61A89C52100791EBF /* home-icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
