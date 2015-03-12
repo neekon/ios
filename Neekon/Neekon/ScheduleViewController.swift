@@ -13,6 +13,11 @@ import Parse
 
 class ScheduleViewController: UIViewController, UIAlertViewDelegate, EKEventEditViewDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var eventNameLabel: UILabel!
+    @IBOutlet weak var eventDateLabel: UILabel!
+    @IBOutlet weak var eventLocationLabel: UILabel!
+    
+    
     @IBAction func calendarButtonPressed(sender: UIButton) {
         let store = EKEventStore()
         store.requestAccessToEntityType(EKEntityTypeEvent) { (granted:Bool, error:NSError!) in
@@ -62,11 +67,14 @@ class ScheduleViewController: UIViewController, UIAlertViewDelegate, EKEventEdit
         
         self.view.backgroundColor = UIColor.clearColor()
 
-        // Do any additional setup after loading the view.
-    }
+        EventInfoObject.fetchEventInfoObject({ (eventInfo:EventInfoObject!, error) in
+            let formatter = NSDateFormatter()
+            formatter.timeStyle = .NoStyle
+            formatter.dateStyle = .LongStyle
+            self.eventNameLabel.text = eventInfo.eventName
+            self.eventDateLabel.text = formatter.stringFromDate(eventInfo.eventDate!)
+            self.eventLocationLabel.text = eventInfo.locationName
+        })
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }

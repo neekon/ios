@@ -33,12 +33,10 @@ class EventInfoObject : PFObject, PFSubclassing {
                 // TODO: show error
                 resultsBlock(nil, error)
             } else {
-                if let objects = results {
-                    var newsObjects = [EventInfoObject]()
-                    for newsObject in objects as [EventInfoObject] {
-                        resultsBlock(newsObject, nil)
-                        return
-                    }
+                if results is [EventInfoObject] {
+                     resultsBlock(results[0] as EventInfoObject, nil)
+                } else {
+                     resultsBlock(nil, NSError(domain: "Weird error", code: 0, userInfo: nil))
                 }
             }
         }
