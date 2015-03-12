@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
@@ -23,7 +23,7 @@
                                     <constraint firstAttribute="width" constant="147" id="2hD-1o-gRq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hre-GC-A43" customClass="BorderButton" customModule="Neekon" customModuleProvider="target">
@@ -53,12 +53,60 @@
                                     <action selector="calendarButtonPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="p5e-je-SaC"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7MA-Dj-WnB">
+                                <rect key="frame" x="175" y="324" width="250" height="107"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neekon Event" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bob-ts-jea">
+                                        <rect key="frame" x="8" y="8" width="234" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="DGS-WD-IAG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friday 03/10/2015  - All day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ld-qQ-hid">
+                                        <rect key="frame" x="8" y="37" width="234" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="8QZ-Qm-9nD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="San Francisco" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arz-0x-vO7">
+                                        <rect key="frame" x="8" y="66" width="234" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Hgt-sU-3cx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Bob-ts-jea" firstAttribute="leading" secondItem="7MA-Dj-WnB" secondAttribute="leading" constant="8" id="2Xt-gB-Uhg"/>
+                                    <constraint firstAttribute="trailing" secondItem="4ld-qQ-hid" secondAttribute="trailing" constant="8" id="HoO-pO-lIY"/>
+                                    <constraint firstAttribute="trailing" secondItem="arz-0x-vO7" secondAttribute="trailing" constant="8" id="Kyp-MQ-Ps6"/>
+                                    <constraint firstAttribute="height" constant="107" id="SPa-16-Xnf"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bob-ts-jea" secondAttribute="trailing" constant="8" id="ZFD-5k-5Un"/>
+                                    <constraint firstItem="4ld-qQ-hid" firstAttribute="top" secondItem="Bob-ts-jea" secondAttribute="bottom" constant="8" id="cug-GC-qIZ"/>
+                                    <constraint firstItem="arz-0x-vO7" firstAttribute="leading" secondItem="7MA-Dj-WnB" secondAttribute="leading" constant="8" id="fAe-Si-zk9"/>
+                                    <constraint firstItem="4ld-qQ-hid" firstAttribute="leading" secondItem="7MA-Dj-WnB" secondAttribute="leading" constant="8" id="hYh-ok-ioA"/>
+                                    <constraint firstItem="arz-0x-vO7" firstAttribute="top" secondItem="4ld-qQ-hid" secondAttribute="bottom" constant="8" id="iFa-2Y-vFH"/>
+                                    <constraint firstAttribute="width" constant="250" id="xue-eJ-ziG"/>
+                                    <constraint firstItem="Bob-ts-jea" firstAttribute="top" secondItem="7MA-Dj-WnB" secondAttribute="top" constant="8" id="zIU-y9-Zjq"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="7MA-Dj-WnB" secondAttribute="centerX" id="1OG-1D-xB0"/>
                             <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="62" id="8v3-do-BJT"/>
                             <constraint firstAttribute="centerX" secondItem="NDk-cv-Gan" secondAttribute="centerX" constant="9.5" id="Dag-iH-zFT"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="hre-GC-A43" secondAttribute="bottom" constant="46" id="UpO-y3-eLy"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="7MA-Dj-WnB" secondAttribute="bottom" constant="120" id="fAm-vy-Qhd"/>
                             <constraint firstAttribute="centerX" secondItem="hre-GC-A43" secondAttribute="centerX" constant="-0.5" id="z7d-8h-XPa"/>
                         </constraints>
                     </view>
