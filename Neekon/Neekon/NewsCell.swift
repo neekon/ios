@@ -20,14 +20,17 @@ class NewsCell: UITableViewCell {
         self.backgroundColor = UIColor.clearColor()
         titleLabel.text = ""
         titleLabel.numberOfLines = 1
-        titleLabel.font = UIFont(name: "HelveticaNeue", size: 30)
+        titleLabel.font = UIFont(name: "HelveticaNeue-Light", size: 30)
+        titleLabel.textAlignment = NSTextAlignment.Center
         
         mainImageView.image = UIImage()
         mainImageView.contentMode = UIViewContentMode.Redraw
+        mainImageView.layer.cornerRadius = 10.0
+        mainImageView.clipsToBounds = true
         
         contentLabel.text = ""
         contentLabel.numberOfLines = 0
-        contentLabel.font = UIFont(name: "HelveticaNeue", size: 14)
+        contentLabel.font = UIFont(name: "HelveticaNeue-Light", size: 14)
         
         addSubview(titleLabel)
         addSubview(mainImageView)

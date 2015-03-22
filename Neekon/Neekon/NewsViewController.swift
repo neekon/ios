@@ -15,7 +15,7 @@ class NewsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.registerClass(NewsCell.self, forCellReuseIdentifier: "NewsCell")
-        tableView.contentInset = UIEdgeInsetsMake(UIApplication.sharedApplication().statusBarFrame.size.height + 5, 0, 0, 0)
+        tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
         tableView.allowsSelection = false
         
         let titleImage = UIImage(named: "navigation-top-bar-logo")

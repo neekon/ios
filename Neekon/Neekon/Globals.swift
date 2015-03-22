@@ -10,4 +10,4 @@ import UIKit
 
 // All global variable and functions are declared here
 
-public let MARGIN:CGFloat = 5.0
+public let MARGIN:CGFloat = 10.0
