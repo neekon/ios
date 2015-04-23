@@ -56,6 +56,9 @@
 		E56972F81A89C52100791EBF /* location-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E56972F21A89C52100791EBF /* location-icon@2x.png */; };
 		E56972F91A89C52100791EBF /* schedule-icon-active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E56972F31A89C52100791EBF /* schedule-icon-active@2x.png */; };
 		E56972FA1A89C52100791EBF /* schedule-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E56972F41A89C52100791EBF /* schedule-icon@2x.png */; };
+		E59073111AE88446002C2787 /* ArtistObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59073101AE88446002C2787 /* ArtistObject.swift */; };
+		E59073131AE88701002C2787 /* EventObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59073121AE88701002C2787 /* EventObject.swift */; };
+		E59073151AE88A02002C2787 /* LocationObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59073141AE88A02002C2787 /* LocationObject.swift */; };
 		E5CCE5ED1A89A662000BE6B8 /* LaunchScreen1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E5CCE5EC1A89A662000BE6B8 /* LaunchScreen1.jpg */; };
 		E5D384EF1AAFE1630066E9E3 /* cableCar1@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E5D384EE1AAFE1630066E9E3 /* cableCar1@2x.jpg */; };
 /* End PBXBuildFile section */
@@ -112,6 +115,9 @@
 		E56972F21A89C52100791EBF /* location-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location-icon@2x.png"; sourceTree = "<group>"; };
 		E56972F31A89C52100791EBF /* schedule-icon-active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedule-icon-active@2x.png"; sourceTree = "<group>"; };
 		E56972F41A89C52100791EBF /* schedule-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedule-icon@2x.png"; sourceTree = "<group>"; };
+		E59073101AE88446002C2787 /* ArtistObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistObject.swift; sourceTree = "<group>"; };
+		E59073121AE88701002C2787 /* EventObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventObject.swift; sourceTree = "<group>"; };
+		E59073141AE88A02002C2787 /* LocationObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationObject.swift; sourceTree = "<group>"; };
 		E5CCE5EC1A89A662000BE6B8 /* LaunchScreen1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LaunchScreen1.jpg; sourceTree = "<group>"; };
 		E5D384EE1AAFE1630066E9E3 /* cableCar1@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cableCar1@2x.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -230,6 +236,9 @@
 				E511F9861A62FE3C00C93E86 /* NewsObject.swift */,
 				E511F9881A63008E00C93E86 /* EventInfoObject.swift */,
 				E511F98A1A63011F00C93E86 /* MapObject.swift */,
+				E59073101AE88446002C2787 /* ArtistObject.swift */,
+				E59073121AE88701002C2787 /* EventObject.swift */,
+				E59073141AE88A02002C2787 /* LocationObject.swift */,
 			);
 			name = "Data Objects";
 			sourceTree = "<group>";
@@ -316,7 +325,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E511F9591A60ED9100C93E86 /* Build configuration list for PBXProject "Neekon" */;
+			buildConfigurationList = E511F9591A60ED9100C93E86 /* Build configuration list for PBXProject "neekon" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -370,14 +379,17 @@
 				E537AD491A8B357B00275387 /* ConstraintAttributes.swift in Sources */,
 				E537AD451A8B357B00275387 /* View+Snap.swift in Sources */,
 				E511F9661A60ED9100C93E86 /* NewsViewController.swift in Sources */,
+				E59073111AE88446002C2787 /* ArtistObject.swift in Sources */,
 				E537AD4A1A8B357B00275387 /* ConstraintRelation.swift in Sources */,
 				E537AD461A8B357B00275387 /* ConstraintMaker.swift in Sources */,
 				E511F98B1A63011F00C93E86 /* MapObject.swift in Sources */,
+				E59073151AE88A02002C2787 /* LocationObject.swift in Sources */,
 				E537AD481A8B357B00275387 /* ConstraintItem.swift in Sources */,
 				E511F9871A62FE3C00C93E86 /* NewsObject.swift in Sources */,
 				82C4E96F1AAFD8F100CB0375 /* BorderButton.swift in Sources */,
 				82AE29D51A75A6A80004FDB3 /* ScheduleViewController.swift in Sources */,
 				E55CABD71A7894F500CF75E6 /* NewsCell.swift in Sources */,
+				E59073131AE88701002C2787 /* EventObject.swift in Sources */,
 				E511F9891A63008E00C93E86 /* EventInfoObject.swift in Sources */,
 				E537AD4B1A8B357B00275387 /* LayoutConstraint.swift in Sources */,
 				82D8E7601A89AF86008DA016 /* Globals.swift in Sources */,
@@ -531,7 +543,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E511F9591A60ED9100C93E86 /* Build configuration list for PBXProject "Neekon" */ = {
+		E511F9591A60ED9100C93E86 /* Build configuration list for PBXProject "neekon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E511F97D1A60ED9200C93E86 /* Debug */,
