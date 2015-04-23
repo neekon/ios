@@ -92,10 +92,10 @@ class NewsCell: UITableViewCell {
     
     func fill(title: NSString?, content: NSString?, imageUrl: NSString?) {
 
-        titleLabel.text = title
-        contentLabel.text = content
+        titleLabel.text = title as? String
+        contentLabel.text = content as? String
         if imageUrl != nil {
-            if let url = NSURL(string: imageUrl!) {
+            if let url = NSURL(string: imageUrl! as String) {
                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), { () -> Void in
                     if let data = NSData(contentsOfURL: url) {
                         if let image = UIImage(data: data) {

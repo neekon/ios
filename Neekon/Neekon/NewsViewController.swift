@@ -57,7 +57,7 @@ class NewsViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("NewsCell", forIndexPath: indexPath) as NewsCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("NewsCell", forIndexPath: indexPath) as! NewsCell
         let newsObject = self.news![indexPath.row]
         cell.fill(newsObject.title, content: newsObject.content, imageUrl: newsObject.imageUrl)
         return cell

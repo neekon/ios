@@ -14,24 +14,24 @@ class NewsObject : PFObject, PFSubclassing {
     @NSManaged var content: String?
     @NSManaged var imageUrl: String?
     
-    override class func load() {
-        superclass()?.load()
+    override class func initialize() {
+        superclass()?.initialize()
         self.registerSubclass()
     }
-    class func parseClassName() -> String! {
+    class func parseClassName() -> String {
         return "News"
     }
     
     class func fetchNewsObjects(resultsBlock: ([NewsObject]!, NSError!) -> Void) {
         let query = NewsObject.query()
-        query.findObjectsInBackgroundWithBlock { (results:[AnyObject]!, error:NSError?) -> Void in
+        query?.findObjectsInBackgroundWithBlock { (results:[AnyObject]?, error:NSError?) -> Void in
             if (error != nil) {
                 // TODO: show error
                 resultsBlock(nil, error)
             } else {
-                if let objects = results {
+                if let objects = results{
                     var newsObjects = [NewsObject]()
-                    for newsObject in objects as [NewsObject] {
+                    for newsObject in objects as! [NewsObject] {
                         newsObjects.append(newsObject)
                     }
                     resultsBlock(newsObjects, nil)

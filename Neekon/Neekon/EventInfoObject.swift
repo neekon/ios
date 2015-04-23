@@ -17,24 +17,27 @@ class EventInfoObject : PFObject, PFSubclassing {
     @NSManaged var latitude: String?
     @NSManaged var longitude: String?
     
-    override class func load() {
-        superclass()?.load()
+
+    
+    override class func initialize() {
+        superclass()?.initialize()
         self.registerSubclass()
     }
 
-    class func parseClassName() -> String! {
+    class func parseClassName() -> String {
         return "EventInfo"
     }
 
     class func fetchEventInfoObject(resultsBlock: (EventInfoObject!, NSError!) -> Void) {
         let query = EventInfoObject.query()
-        query.findObjectsInBackgroundWithBlock { (results:[AnyObject]!, error:NSError?) -> Void in
+
+        query?.findObjectsInBackgroundWithBlock { (results:[AnyObject]?, error:NSError?) -> Void in
             if (error != nil) {
                 // TODO: show error
                 resultsBlock(nil, error)
             } else {
                 if results is [EventInfoObject] {
-                     resultsBlock(results[0] as EventInfoObject, nil)
+                     resultsBlock(results![0] as! EventInfoObject, nil)
                 } else {
                      resultsBlock(nil, NSError(domain: "Weird error", code: 0, userInfo: nil))
                 }
