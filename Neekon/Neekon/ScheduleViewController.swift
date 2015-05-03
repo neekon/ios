@@ -27,8 +27,10 @@ class ScheduleViewController: UITableViewController, UIAlertViewDelegate, UINavi
         self.navigationItem.titleView = titleView
         
         self.view.backgroundColor = UIColor.clearColor()
+    
         
-        tableView.registerClass(EventCell.self, forCellReuseIdentifier: "EventCell")
+        let nib = UINib(nibName: "EventCell", bundle: nil)
+        tableView.registerNib(nib, forCellReuseIdentifier: "EventCell")
         tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
         tableView.allowsSelection = false
         tableView.separatorStyle = .None

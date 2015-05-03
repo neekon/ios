@@ -7,16 +7,26 @@
 //
 
 import UIKit
-//import Snap // TODO
+import SnapKit
 
 class EventCell: UITableViewCell {
     
     var event: EventObject?
     
+    @IBOutlet weak var eventImage: UIImageView!
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var timeAndLocation: UILabel!
+    
+    let startTimeFormatter = NSDateFormatter()
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
 
         backgroundColor = UIColor.clearColor()
+        
+        startTimeFormatter.dateStyle = .NoStyle
+        startTimeFormatter.timeStyle = .ShortStyle
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -29,16 +39,18 @@ class EventCell: UITableViewCell {
         
         self.event = event_
         
-        let titleLabel = UILabel()
-        titleLabel.text = event!.title!
-        titleLabel.sizeToFit()
-        addSubview(titleLabel)
+        println(event!)
         
-        let descriptionLabel = UILabel()
-        descriptionLabel.text = event!.eventDescription!
-        descriptionLabel.sizeToFit()
-        addSubview(descriptionLabel)
+        title.text = event!.title!
         
+        // TODO guard against invalid URLs
+        eventImage.contentMode = .ScaleAspectFill
+        eventImage.clipsToBounds = true
+        eventImage.image = UIImage(data: NSData(contentsOfURL: NSURL(string: event!.image!)!)!)
+        
+        let durationInHours = Int(event!.duration!) / 60;
+        let formattedStartTime = startTimeFormatter.stringFromDate(event!.startTime!)
+        timeAndLocation.text = "Starts at \(formattedStartTime) (\(durationInHours) hours)"
     }
     
 }
