@@ -9,16 +9,25 @@
 import UIKit
 import MapKit
 import Parse
+import EventKit
+import EventKitUI
 
-class MapViewController: UIViewController {
+private let formatter = NSDateFormatter()
+
+
+class MapViewController: UIViewController, EKEventEditViewDelegate {
     
     var eventInfoObject:EventInfoObject?
     
-    @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set formatter style
+        formatter.timeStyle = .NoStyle
+        formatter.dateStyle = .LongStyle
         
         let titleImage = UIImage(named: "navigation-top-bar-logo")
         let titleView = UIImageView(image: titleImage)
@@ -32,9 +41,44 @@ class MapViewController: UIViewController {
         EventInfoObject.fetchEventInfoObject { (eventInfoObject, error) -> Void in
             if (error == nil) {
                 self.eventInfoObject = eventInfoObject;
-                self.updateAddress()
+
+                self.dateLabel.text = formatter.stringFromDate(eventInfoObject.eventDate!)
+                self.locationLabel.text = eventInfoObject.locationName
             }
         }
+    }
+    
+    @IBAction func calendarButtonPressed(sender: UIButton) {
+        let store = EKEventStore()
+        store.requestAccessToEntityType(EKEntityTypeEvent) { (granted:Bool, error:NSError!) in
+            if granted {
+                EventInfoObject.fetchEventInfoObject({ (eventInfo, error) -> Void in
+                    if (error == nil) {
+                        let event = EKEvent(eventStore: store)
+                        event.startDate = eventInfo.eventDate
+                        event.allDay = true
+                        event.endDate = eventInfo.eventDate?.dateByAddingTimeInterval(24 * 60 * 60)
+                        event.title = eventInfo.eventName
+                        event.location = eventInfo.locationName
+                        event.calendar = store.defaultCalendarForNewEvents
+                        
+                        let controller = EKEventEditViewController()
+                        
+                        controller.event = event
+                        controller.eventStore = store
+                        controller.editViewDelegate = self
+                        
+                        dispatch_async(dispatch_get_main_queue()) {
+                            self.presentViewController(controller, animated: true, completion: {})
+                        }
+                    }
+                })
+            }
+        }
+    }
+    
+    func eventEditViewController(controller: EKEventEditViewController!, didCompleteWithAction action: EKEventEditViewAction) {
+        controller.dismissViewControllerAnimated(true, completion: {})
     }
 
     @IBAction func didTapGetDirection(sender: AnyObject) {
@@ -47,38 +91,6 @@ class MapViewController: UIViewController {
         }
         
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func updateAddress() {
-        if let address = eventInfoObject?.locationName {
-            addressLabel.text = "\(address)"
-        } else {
-            addressLabel.text = ""
-        }
-    }
-    
-//    func updateMap() {
-//        
-//        let address = schedule.objectForKey("location") as NSString
-//        let latitude = schedule.objectForKey("latitude") as NSString
-//        let longitude = schedule.objectForKey("longitude") as NSString
-//        
-//        let coordinates = CLLocationCoordinate2D(latitude: CLLocationDegrees(latitude.doubleValue) , longitude: CLLocationDegrees(longitude.doubleValue))
-//        let region = MKCoordinateRegionMakeWithDistance(coordinates, 3000, 3000)
-//        let adjustedRegion = mapView.regionThatFits(region)
-//        
-//        // Add pin
-//        let point = MKPointAnnotation()
-//        point.coordinate = coordinates
-//        mapView.addAnnotation(point)
-//
-//        mapView.setRegion(region, animated: true)
-//        mapView.showsUserLocation = true
-//    }
 
 }
 

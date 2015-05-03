@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
         <!--Schedule-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" userLabel="Schedule" customClass="ScheduleViewController" customModule="Neekon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" userLabel="Schedule" customClass="ScheduleViewController" customModule="neekon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -17,16 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event schedule coming soon" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="217" y="126" width="147" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="147" id="2hD-1o-gRq"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hre-GC-A43" customClass="BorderButton" customModule="Neekon" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hre-GC-A43" customClass="BorderButton" customModule="neekon" customModuleProvider="target">
                                 <rect key="frame" x="146" y="470" width="309" height="35"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -103,20 +93,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="7MA-Dj-WnB" secondAttribute="centerX" id="1OG-1D-xB0"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="62" id="8v3-do-BJT"/>
-                            <constraint firstAttribute="centerX" secondItem="NDk-cv-Gan" secondAttribute="centerX" constant="9.5" id="Dag-iH-zFT"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="hre-GC-A43" secondAttribute="bottom" constant="46" id="UpO-y3-eLy"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="7MA-Dj-WnB" secondAttribute="bottom" constant="120" id="fAm-vy-Qhd"/>
                             <constraint firstAttribute="centerX" secondItem="hre-GC-A43" secondAttribute="centerX" constant="-0.5" id="z7d-8h-XPa"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="hre-GC-A43"/>
+                                <exclude reference="7MA-Dj-WnB"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Schedule" image="schedule-icon.png" id="cPa-gy-q4n"/>
                     <navigationItem key="navigationItem" id="jMT-fe-l31"/>
-                    <connections>
-                        <outlet property="eventDateLabel" destination="4ld-qQ-hid" id="7Qy-6j-gVW"/>
-                        <outlet property="eventLocationLabel" destination="arz-0x-vO7" id="5w0-XG-Ytr"/>
-                        <outlet property="eventNameLabel" destination="Bob-ts-jea" id="lKx-TS-vLp"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -125,7 +114,7 @@
         <!--Schedule-->
         <scene sceneID="E83-Qp-96L">
             <objects>
-                <navigationController title="Home" id="1RP-71-6IB" userLabel="Schedule" customClass="MainNavigationController" customModule="Neekon" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController title="Home" id="1RP-71-6IB" userLabel="Schedule" customClass="MainNavigationController" customModule="neekon" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="irj-mb-prg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="656-Sa-cAP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -142,7 +131,7 @@
         <!--Home-->
         <scene sceneID="cKj-nc-bku">
             <objects>
-                <navigationController title="Home" id="Yst-ID-BPB" customClass="MainNavigationController" customModule="Neekon" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController title="Home" id="Yst-ID-BPB" customClass="MainNavigationController" customModule="neekon" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" id="dtj-gC-ptU"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="c4s-xO-rxC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -159,7 +148,7 @@
         <!--News-->
         <scene sceneID="hec-Ef-1VA">
             <objects>
-                <tableViewController id="u14-6K-hHW" userLabel="News" customClass="NewsViewController" customModule="Neekon" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="u14-6K-hHW" userLabel="News" customClass="NewsViewController" customModule="neekon" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="4NV-So-2JP">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -199,7 +188,7 @@
         <!--Map-->
         <scene sceneID="foC-01-TIU">
             <objects>
-                <navigationController id="kqv-lk-JSP" userLabel="Map" customClass="MainNavigationController" customModule="Neekon" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="kqv-lk-JSP" userLabel="Map" customClass="MainNavigationController" customModule="neekon" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" id="RKc-Ar-Y47" userLabel="Map"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jl8-4o-XXt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -216,7 +205,7 @@
         <!--Map-->
         <scene sceneID="bKV-0I-vEk">
             <objects>
-                <viewController id="PU1-sG-b44" userLabel="Map" customClass="MapViewController" customModule="Neekon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PU1-sG-b44" userLabel="Map" customClass="MapViewController" customModule="neekon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="g8p-vo-ZCK"/>
                         <viewControllerLayoutGuide type="bottom" id="3Ta-09-FSP"/>
@@ -228,20 +217,17 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ggparkflyover.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="IPG-P4-g9V">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                             </imageView>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bYi-pF-2mt">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="464"/>
-                            </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="USN-ID-pUf" userLabel="TitleBackgroundView">
-                                <rect key="frame" x="0.0" y="523" width="375" height="95"/>
+                                <rect key="frame" x="0.0" y="498" width="375" height="120"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="San Francisco" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Db5-xM-1Ig" userLabel="LocationCity">
-                                        <rect key="frame" x="124" y="39" width="128" height="23.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Golden Gate Park" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Db5-xM-1Ig" userLabel="locationLabel">
+                                        <rect key="frame" x="8" y="40" width="359" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFm-T3-3HC">
-                                        <rect key="frame" x="138.5" y="65" width="98" height="30"/>
+                                        <rect key="frame" x="139" y="67" width="98" height="53"/>
                                         <gestureRecognizers/>
                                         <state key="normal" title="Get Directions">
                                             <color key="titleColor" red="1" green="0.47240256629999999" blue="0.97152713079999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -251,24 +237,25 @@
                                             <outletCollection property="gestureRecognizers" destination="h1G-em-xQa" appends="YES" id="2Sv-gq-Soz"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Golden Gate Park" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSe-hM-1yv" userLabel="LocationName">
-                                        <rect key="frame" x="107" y="8" width="161" height="24.5"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="September 2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLv-uj-sM8" userLabel="dateLabel">
+                                        <rect key="frame" x="8" y="7" width="359" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <size key="shadowOffset" width="1" height="1"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.51000000000000001" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Db5-xM-1Ig" secondAttribute="bottom" constant="20" id="0ye-S7-L9r"/>
-                                    <constraint firstAttribute="height" constant="95" id="Abq-WV-gyK"/>
-                                    <constraint firstItem="Db5-xM-1Ig" firstAttribute="top" secondItem="kSe-hM-1yv" secondAttribute="bottom" constant="6.5" id="JS4-Br-VZ9"/>
+                                    <constraint firstItem="fLv-uj-sM8" firstAttribute="top" secondItem="USN-ID-pUf" secondAttribute="top" constant="7" id="3Cu-Pq-XYp"/>
+                                    <constraint firstAttribute="height" constant="120" id="Abq-WV-gyK"/>
                                     <constraint firstItem="uFm-T3-3HC" firstAttribute="top" secondItem="Db5-xM-1Ig" secondAttribute="bottom" constant="2.5" id="KGp-Dt-9CI"/>
+                                    <constraint firstItem="Db5-xM-1Ig" firstAttribute="leading" secondItem="USN-ID-pUf" secondAttribute="leading" constant="8" id="Pjg-w0-XVI"/>
+                                    <constraint firstAttribute="trailing" secondItem="Db5-xM-1Ig" secondAttribute="trailing" constant="8" id="RvE-le-uiz"/>
+                                    <constraint firstItem="fLv-uj-sM8" firstAttribute="leading" secondItem="USN-ID-pUf" secondAttribute="leading" constant="8" id="WJw-to-oeG"/>
+                                    <constraint firstItem="Db5-xM-1Ig" firstAttribute="top" secondItem="fLv-uj-sM8" secondAttribute="top" constant="33" id="fS7-7x-UA6"/>
                                     <constraint firstAttribute="bottom" secondItem="uFm-T3-3HC" secondAttribute="bottom" id="rv4-yT-4Rc"/>
-                                    <constraint firstItem="kSe-hM-1yv" firstAttribute="centerX" secondItem="Db5-xM-1Ig" secondAttribute="centerX" constant="-0.5" id="zyO-wC-pDe"/>
+                                    <constraint firstAttribute="trailing" secondItem="fLv-uj-sM8" secondAttribute="trailing" constant="8" id="tS6-1i-poT"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -276,6 +263,33 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Pj-lh-2bw" customClass="BorderButton" customModule="neekon" customModuleProvider="target">
+                                <rect key="frame" x="33" y="442" width="309" height="35"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Alo-3x-aya"/>
+                                    <constraint firstAttribute="width" constant="309" id="aTR-sx-uOh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Add this event to your calendar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="calendarButtonPressed:" destination="PU1-sG-b44" eventType="touchUpInside" id="vQJ-ne-2rH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -286,22 +300,19 @@
                             <constraint firstItem="IPG-P4-g9V" firstAttribute="centerX" secondItem="uFm-T3-3HC" secondAttribute="centerX" id="Q4u-Hf-F8j"/>
                             <constraint firstItem="3Ta-09-FSP" firstAttribute="top" secondItem="IPG-P4-g9V" secondAttribute="bottom" id="Rsc-5p-zcq"/>
                             <constraint firstItem="Db5-xM-1Ig" firstAttribute="centerX" secondItem="IPG-P4-g9V" secondAttribute="centerX" constant="0.5" id="SPS-e0-kSw"/>
+                            <constraint firstItem="4Pj-lh-2bw" firstAttribute="bottom" secondItem="USN-ID-pUf" secondAttribute="bottom" constant="-141" id="bxx-cP-IsG"/>
                             <constraint firstItem="USN-ID-pUf" firstAttribute="leading" secondItem="V4F-2C-wSa" secondAttribute="leading" id="e6A-HA-UOn"/>
                             <constraint firstAttribute="trailing" secondItem="IPG-P4-g9V" secondAttribute="trailing" id="ldq-iN-OQ4"/>
+                            <constraint firstItem="4Pj-lh-2bw" firstAttribute="centerX" secondItem="IPG-P4-g9V" secondAttribute="centerX" id="pdc-Gs-YUs"/>
                             <constraint firstItem="IPG-P4-g9V" firstAttribute="top" secondItem="g8p-vo-ZCK" secondAttribute="bottom" id="vg1-nf-YRQ"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="bYi-pF-2mt"/>
-                            </mask>
-                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="location-icon.png" id="xFN-lp-91F" userLabel="Map"/>
                     <navigationItem key="navigationItem" id="lze-i9-fFa"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="addressLabel" destination="kSe-hM-1yv" id="a0S-6U-fuu"/>
-                        <outlet property="mapView" destination="bYi-pF-2mt" id="qWl-Ht-Ago"/>
+                        <outlet property="dateLabel" destination="fLv-uj-sM8" id="nDg-0h-ivH"/>
+                        <outlet property="locationLabel" destination="Db5-xM-1Ig" id="pXJ-OB-zJX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6DJ-H1-QbW" sceneMemberID="firstResponder"/>
@@ -311,7 +322,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1018" y="856"/>
+            <point key="canvasLocation" x="1017.5" y="855.5"/>
         </scene>
     </scenes>
     <resources>

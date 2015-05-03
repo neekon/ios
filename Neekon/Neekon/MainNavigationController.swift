@@ -25,23 +25,6 @@ class MainNavigationController: UINavigationController {
         
         UITabBar.appearance().barTintColor = UIColor.purpleColor()
         UITabBar.appearance().tintColor = UIColor.whiteColor()
-//        
-//        let tabBarItems = self.tabBarController?.tabBar.items as [UITabBarItem]
-//        
-//        let newsTab = tabBarItems[0]
-//        
-//        let newsTabImage = UIImage(named: "home-icon")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
-//        newsTab.image = newsTabImage
-//        newsTab.selectedImage = UIImage(named: "home-icon-selected")
-//        
-    
-//        UITabBarItem *tabBarItem = [self.tabBarController!.tabBar.items objectAtIndex:0];
-//        
-//        UIImage *unselectedImage = [UIImage imageNamed:@"icon-unselected"];
-//        UIImage *selectedImage = [UIImage imageNamed:@"icon-selected"];
-//        
-//        [tabBarItem setImage: [unselectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-//        [tabBarItem setSelectedImage: selectedImage];
         
         
     }
