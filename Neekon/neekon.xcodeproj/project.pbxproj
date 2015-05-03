@@ -26,6 +26,7 @@
 		82BC51031A60F3E1002503F1 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BC50FE1A60F3E1002503F1 /* ParseCrashReporting.framework */; };
 		82BC51041A60F3E1002503F1 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BC50FF1A60F3E1002503F1 /* ParseFacebookUtils.framework */; };
 		82BC51051A60F3E1002503F1 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BC51001A60F3E1002503F1 /* ParseUI.framework */; };
+		82BED9D21AF5E24B00F99682 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BED9D01AF5E24B00F99682 /* EventCell.swift */; };
 		82C4E96F1AAFD8F100CB0375 /* BorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C4E96E1AAFD8F100CB0375 /* BorderButton.swift */; };
 		82D8E7601A89AF86008DA016 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D8E75F1A89AF86008DA016 /* Globals.swift */; };
 		E511F9641A60ED9100C93E86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F9631A60ED9100C93E86 /* AppDelegate.swift */; };
@@ -83,6 +84,7 @@
 		82BC50FE1A60F3E1002503F1 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = ../Frameworks/ParseCrashReporting.framework; sourceTree = "<group>"; };
 		82BC50FF1A60F3E1002503F1 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = ../Frameworks/ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		82BC51001A60F3E1002503F1 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = ../Frameworks/ParseUI.framework; sourceTree = "<group>"; };
+		82BED9D01AF5E24B00F99682 /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		82C4E96E1AAFD8F100CB0375 /* BorderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderButton.swift; sourceTree = "<group>"; };
 		82D8E75F1A89AF86008DA016 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		E511F95E1A60ED9100C93E86 /* neekon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = neekon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -263,6 +265,7 @@
 			children = (
 				E55CABD61A7894F500CF75E6 /* NewsCell.swift */,
 				82C4E96E1AAFD8F100CB0375 /* BorderButton.swift */,
+				82BED9D01AF5E24B00F99682 /* EventCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -325,7 +328,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E511F9591A60ED9100C93E86 /* Build configuration list for PBXProject "neekon" */;
+			buildConfigurationList = E511F9591A60ED9100C93E86 /* Build configuration list for PBXProject "Neekon" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -392,6 +395,7 @@
 				E59073131AE88701002C2787 /* EventObject.swift in Sources */,
 				E511F9891A63008E00C93E86 /* EventInfoObject.swift in Sources */,
 				E537AD4B1A8B357B00275387 /* LayoutConstraint.swift in Sources */,
+				82BED9D21AF5E24B00F99682 /* EventCell.swift in Sources */,
 				82D8E7601A89AF86008DA016 /* Globals.swift in Sources */,
 				E537AD471A8B357B00275387 /* Constraint.swift in Sources */,
 			);
@@ -543,7 +547,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E511F9591A60ED9100C93E86 /* Build configuration list for PBXProject "neekon" */ = {
+		E511F9591A60ED9100C93E86 /* Build configuration list for PBXProject "Neekon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E511F97D1A60ED9200C93E86 /* Debug */,

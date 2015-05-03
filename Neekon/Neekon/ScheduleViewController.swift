@@ -9,7 +9,9 @@
 import UIKit
 import Parse
 
-class ScheduleViewController: UIViewController, UIAlertViewDelegate, UINavigationControllerDelegate {
+class ScheduleViewController: UITableViewController, UIAlertViewDelegate, UINavigationControllerDelegate {
+    
+    var events = [EventObject]()
     
     func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
         alertView.dismissWithClickedButtonIndex(buttonIndex, animated: true)
@@ -25,6 +27,32 @@ class ScheduleViewController: UIViewController, UIAlertViewDelegate, UINavigatio
         self.navigationItem.titleView = titleView
         
         self.view.backgroundColor = UIColor.clearColor()
-
+        
+        tableView.registerClass(EventCell.self, forCellReuseIdentifier: "EventCell")
+        tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
+        tableView.allowsSelection = false
+        tableView.separatorStyle = .None
+        
+        EventObject.fetchEventObjects { (events: [EventObject]!, error: NSError!) in
+            self.events = events
+            self.tableView.reloadData()
+        }
     }
+    
+    // - TableView Data
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return events.count
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("EventCell", forIndexPath: indexPath) as! EventCell
+        
+        cell.updateEvent(event: events[indexPath.row])
+        return cell
+    }
+    
 }
