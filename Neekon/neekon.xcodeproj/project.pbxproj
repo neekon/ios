@@ -31,6 +31,8 @@
 		82BED9E51AF688DD00F99682 /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82BED9E41AF688DD00F99682 /* EventCell.xib */; };
 		82C4E96F1AAFD8F100CB0375 /* BorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C4E96E1AAFD8F100CB0375 /* BorderButton.swift */; };
 		82D8E7601A89AF86008DA016 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D8E75F1A89AF86008DA016 /* Globals.swift */; };
+		82DD51ED1B07BAF20001950F /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DD51EB1B07BAF20001950F /* EventDetailsViewController.swift */; };
+		82DD51EE1B07BAF20001950F /* EventDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82DD51EC1B07BAF20001950F /* EventDetailsViewController.xib */; };
 		E511F9641A60ED9100C93E86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F9631A60ED9100C93E86 /* AppDelegate.swift */; };
 		E511F9661A60ED9100C93E86 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F9651A60ED9100C93E86 /* NewsViewController.swift */; };
 		E511F9681A60ED9100C93E86 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511F9671A60ED9100C93E86 /* MapViewController.swift */; };
@@ -114,6 +116,8 @@
 		82BED9E41AF688DD00F99682 /* EventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
 		82C4E96E1AAFD8F100CB0375 /* BorderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderButton.swift; sourceTree = "<group>"; };
 		82D8E75F1A89AF86008DA016 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		82DD51EB1B07BAF20001950F /* EventDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
+		82DD51EC1B07BAF20001950F /* EventDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventDetailsViewController.xib; sourceTree = "<group>"; };
 		E511F95E1A60ED9100C93E86 /* neekon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = neekon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E511F9621A60ED9100C93E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E511F9631A60ED9100C93E86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -217,6 +221,8 @@
 				E511F9671A60ED9100C93E86 /* MapViewController.swift */,
 				82AE29D41A75A6A80004FDB3 /* ScheduleViewController.swift */,
 				E56972E91A89B59F00791EBF /* MainNavigationController.swift */,
+				82DD51EB1B07BAF20001950F /* EventDetailsViewController.swift */,
+				82DD51EC1B07BAF20001950F /* EventDetailsViewController.xib */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -411,6 +417,7 @@
 				E56972FA1A89C52100791EBF /* schedule-icon@2x.png in Resources */,
 				E5CCE5ED1A89A662000BE6B8 /* LaunchScreen1.jpg in Resources */,
 				E5D384EF1AAFE1630066E9E3 /* cableCar1@2x.jpg in Resources */,
+				82DD51EE1B07BAF20001950F /* EventDetailsViewController.xib in Resources */,
 				E511F96B1A60ED9100C93E86 /* Main.storyboard in Resources */,
 				E56972F91A89C52100791EBF /* schedule-icon-active@2x.png in Resources */,
 				E56972EE1A89BC3C00791EBF /* home-BG.jpg in Resources */,
@@ -434,6 +441,7 @@
 				E511F9681A60ED9100C93E86 /* MapViewController.swift in Sources */,
 				E511F9641A60ED9100C93E86 /* AppDelegate.swift in Sources */,
 				E511F9661A60ED9100C93E86 /* NewsViewController.swift in Sources */,
+				82DD51ED1B07BAF20001950F /* EventDetailsViewController.swift in Sources */,
 				E59073111AE88446002C2787 /* ArtistObject.swift in Sources */,
 				E511F98B1A63011F00C93E86 /* MapObject.swift in Sources */,
 				E59073151AE88A02002C2787 /* LocationObject.swift in Sources */,

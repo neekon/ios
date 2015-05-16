@@ -12,13 +12,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="m7X-XS-Zpu">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m7X-XS-Zpu" id="kli-XT-Qqf">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Schedule" image="schedule-icon.png" id="cPa-gy-q4n"/>
                     <navigationItem key="navigationItem" id="jMT-fe-l31"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1308" y="-724"/>
+            <point key="canvasLocation" x="1702" y="-750"/>
         </scene>
         <!--Schedule-->
         <scene sceneID="E83-Qp-96L">
@@ -35,7 +44,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SGS-Ez-Sba" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="148" y="-750"/>
+            <point key="canvasLocation" x="828" y="-750"/>
         </scene>
         <!--Home-->
         <scene sceneID="cKj-nc-bku">
@@ -72,7 +81,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vc2-4z-667" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1744" y="52"/>
+            <point key="canvasLocation" x="1702" y="0.0"/>
         </scene>
         <!--TitleISHere-->
         <scene sceneID="yl2-sM-qoP">
@@ -109,7 +118,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VAu-B1-ElF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8" y="864"/>
+            <point key="canvasLocation" x="0.0" y="864"/>
         </scene>
         <!--Map-->
         <scene sceneID="bKV-0I-vEk">
@@ -231,7 +240,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1017.5" y="855.5"/>
+            <point key="canvasLocation" x="723.5" y="869.5"/>
         </scene>
     </scenes>
     <resources>

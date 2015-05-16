@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class ScheduleViewController: UITableViewController, UIAlertViewDelegate, UINavigationControllerDelegate {
+class ScheduleViewController: UITableViewController, UITableViewDelegate, UIAlertViewDelegate, UINavigationControllerDelegate {
     
     var events = [EventObject]()
     
@@ -32,8 +32,8 @@ class ScheduleViewController: UITableViewController, UIAlertViewDelegate, UINavi
         let nib = UINib(nibName: "EventCell", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: "EventCell")
         tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
-        tableView.allowsSelection = false
         tableView.separatorStyle = .None
+        tableView.allowsSelection = true
         
         EventObject.fetchEventObjects { (events: [EventObject]!, error: NSError!) in
             self.events = events
@@ -57,4 +57,11 @@ class ScheduleViewController: UITableViewController, UIAlertViewDelegate, UINavi
         return cell
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let event = events[indexPath.row]
+        let details = EventDetailsViewController()
+        details.event = event
+        
+        navigationController?.pushViewController(details, animated: true)
+    }
 }
